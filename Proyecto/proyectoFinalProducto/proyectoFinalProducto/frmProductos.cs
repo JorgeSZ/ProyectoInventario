@@ -52,16 +52,6 @@ namespace proyectoFinalProducto
 
         void crearProducto()
         {
-                     
-
-            Producto objProducto = new Producto();
-            objProducto.idProducto = Convert.ToInt32(txtIdProducto.Text);
-            objProducto.desProducto = txtDescripcion.Text;
-            objProducto.codTipoProducto = Convert.ToInt32(cmbTipo.SelectedValue);
-            objProducto.costo = Convert.ToDecimal(txtCosto.Text);
-            objProducto.porcUtilidad = Convert.ToDecimal(txtUtilidad.Text);
-            frmPrincipal.listaProductos.Add(objProducto);
-            dgDatosProducto.DataSource = frmPrincipal.listaProductos;
             establecerConexion();
             cmd = new SqlCommand();
             SqlParameter prm = new SqlParameter();
