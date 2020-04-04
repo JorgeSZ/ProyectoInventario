@@ -1,0 +1,27 @@
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\a.garcia\Source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmProveedores.resources
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.dll
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.xml
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+C:\Users\Jeikelyn\Documents\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmPrincipal.resources
