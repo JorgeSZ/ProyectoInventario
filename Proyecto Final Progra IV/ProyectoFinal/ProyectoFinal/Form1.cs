@@ -80,11 +80,11 @@ namespace ProyectoFinal
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-
-                MessageBox.Show("Inicio correcto");
-                this.Visible = false;
                 frmPrincipal form2 = new frmPrincipal();
-                form2.Show();
+                MessageBox.Show("Inicio correcto");
+                this.Hide();
+                form2.ShowDialog();
+                this.Close();
 
             }
             else
@@ -133,6 +133,14 @@ namespace ProyectoFinal
         private void Label3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void TxtContrasenna_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                BtnIngresar_Click(sender, e);
+            }
         }
     }
     #endregion

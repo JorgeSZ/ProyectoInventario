@@ -48,20 +48,77 @@ namespace ProyectoFinal
                 return false;
             }
         }
+        void consultarProductos()
+        {
 
-        private void crearproducto()
+            frmPrincipal.listaProveedor.Clear();
+            dgvProveedores.DataSource = new List<Proveedor>();
+            establecerConexion();
+            cmd = new SqlCommand();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandTimeout = 0;
+            cmd.CommandText = "Select * from Proveedor";
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Proveedor objProveedor = new Proveedor();
+                objProveedor.idProveedor= dr.GetInt32(0);
+                objProveedor.desProveedor = dr.GetString(1);
+                objProveedor.codTipoProveedor = dr.GetInt32(2);
+                
+                frmPrincipal.listaProveedor.Add(objProveedor);
+            }
+
+            dgvProveedores.DataSource = frmPrincipal.listaProveedor;
+            cnx.Close();
+            cnx.Dispose();
+            
+
+
+
+        }
+
+        void limpiarControles()
+        {
+            txtIdProveedor.Text = "";
+            txtnomProveedor.Text = string.Empty;
+            cmbTipoProveedor.SelectedIndex = 0;
+            txtIdProveedor.Focus();
+        }
+
+        void obtenerparametros()
+        {
+            try
+            {
+                Proveedor objproveedor = new Proveedor();
+                objproveedor.idProveedor = Convert.ToInt32(txtIdProveedor.Text);
+                objproveedor.desProveedor = txtnomProveedor.Text;
+                objproveedor.codTipoProveedor = Convert.ToInt32(cmbTipoProveedor.SelectedValue);
+                cmd.Parameters.AddWithValue("@idproveedor", objproveedor.idProveedor);
+                cmd.Parameters.AddWithValue("@nomproveedor", objproveedor.desProveedor);
+                cmd.Parameters.AddWithValue("@tipoproveedor", objproveedor.codTipoProveedor);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+
+        }
+
+        void crearproducto()
         {
             try
             { 
             establecerConexion();
             cmd = new SqlCommand();
+            obtenerparametros();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandTimeout = 0;
-            cmd.Parameters.AddWithValue("@idproveedor", txtIdProveedor.Text);
-            cmd.Parameters.AddWithValue("@nomproveedor", txtnomProveedor.Text);
-            cmd.Parameters.AddWithValue("@tipoproveedor", cmbTipoProveedor.SelectedIndex);
-                cmd.CommandText = "SP_AddProveedor";
+            cmd.CommandText = "SP_AddProveedor";
             
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
@@ -86,52 +143,77 @@ namespace ProyectoFinal
             cnx.Dispose();
 
         }
-    
+       
 
-
-
-        void limpiarControles()
+        void modificarProducto()
         {
-            txtIdProveedor.Text = "";
-            txtnomProveedor.Text = string.Empty;
-            cmbTipoProveedor.SelectedIndex = 0;
+            
+            if (txtIdProveedor.Text == string.Empty)
+            {
+                return;
+            }
+
+            establecerConexion();
+            cmd = new SqlCommand();
+            obtenerparametros();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandTimeout = 0;  
+            cmd.CommandText = "SP_UpdProveedor";
+            int cont = cmd.ExecuteNonQuery();
+            if (cont == 1)
+            {
+                MessageBox.Show("Modificacion exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Modificacion Fallida");
+            }
+            cnx.Close();
+            cnx.Dispose();
+
+
         }
 
-        //void consultarProductos()
-        //{
-        //    frmPrincipal.listaProveedor.Clear();
+        void eliminarProducto()
+        {
 
-        //    //dgDatosProducto.DataSource = new List<Producto>();
-        //    establecerConexion();
-        //    cmd = new SqlCommand();
-        //    cmd.Connection = cnx;
-        //    cmd.CommandType = CommandType.Text;
-        //    cmd.CommandTimeout = 0;
-        //    cmd.CommandText = "Select * from Productos";
-        //    dr = cmd.ExecuteReader();
-        //    while (dr.Read())
-        //    {
-        //        Producto objProducto = new Producto();
-        //        objProducto.idProducto = dr.GetInt32(0);
-        //        objProducto.desProducto = dr.GetString(1);
-        //        objProducto.codTipo = dr.GetInt32(2);
-        //        objProducto.costoProd = dr.GetDecimal(3);
-        //        objProducto.porcUtilidad = dr.GetDecimal(4);
-        //        frmPrincipal.listaProductos.Add(objProducto);
-        //    }
+            if (txtIdProveedor.Text == string.Empty)
+            {
+                return;
+            }
+      
+            establecerConexion();
+            cmd = new SqlCommand();
+            obtenerparametros();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandTimeout = 0;
+            cmd.CommandText = "SP_DelProveedor";
+            int cont = cmd.ExecuteNonQuery();
+            if (cont == 1)
+            {
+                MessageBox.Show("Eliminación exitosa");
+            }
+            else
+            {
+                MessageBox.Show("Eliminación Fallida");
+            }
+            cnx.Close();
+            cnx.Dispose();
 
-        //    dgDatosProducto.DataSource = frmPrincipal.listaProductos;
-        //    cnx.Close();
-        //    cnx.Dispose();
 
+        }
 
-
-        //}
 
         #endregion
+
+
         public frmProveedores()
         {
             InitializeComponent();
+            consultarProductos();
+            
         }
 
         private void FrmProveedores_Load(object sender, EventArgs e)
@@ -149,9 +231,35 @@ namespace ProyectoFinal
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             crearproducto();
+            limpiarControles();
+            consultarProductos();
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            modificarProducto();
+            limpiarControles();
+            consultarProductos();
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminarProducto();
+            limpiarControles();
+            consultarProductos();
+             
+        }
+
+        private void DgvProveedores_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtnomProveedor.Text = dgvProveedores.CurrentRow.Cells["desProveedor"].Value.ToString();
+            txtIdProveedor.Text = dgvProveedores.CurrentRow.Cells["idProveedor"].Value.ToString();
+            cmbTipoProveedor.SelectedValue = dgvProveedores.CurrentRow.Cells["TipoProveedor"].Value.ToString();
+
         }
     }
 }

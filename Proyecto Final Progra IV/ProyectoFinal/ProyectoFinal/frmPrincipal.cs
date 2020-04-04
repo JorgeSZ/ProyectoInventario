@@ -18,6 +18,8 @@ namespace ProyectoFinal
         public frmPrincipal()
         {
             InitializeComponent();
+            listaProveedor = new List<Proveedor>();
+            
         }
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
@@ -26,7 +28,7 @@ namespace ProyectoFinal
             {
                 foreach (Form item in Application.OpenForms)
                 {
-                    if (item.Name == "frmProductos")
+                    if (item.Name == "frmProveedores")
                     {
                         return;
 
@@ -35,8 +37,18 @@ namespace ProyectoFinal
 
                 frmProveedores objfrmproveedores = new frmProveedores();
                 objfrmproveedores.MdiParent = this;
+                objfrmproveedores.Dock = DockStyle.Fill;
                 objfrmproveedores.Show();
             }
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.TipoProveedor' Puede moverla o quitarla según sea necesario.
+            //this.tipoProveedorTableAdapter.Fill(this.prograIVDataSet1.TipoProveedor);
+            // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.TipoProducto' Puede moverla o quitarla según sea necesario.
+            //this.tipoProductoTableAdapter.Fill(this.prograIVDataSet1.TipoProducto);
+
         }
     }
 }

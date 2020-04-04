@@ -33,6 +33,8 @@
             this.frmProveedores = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
+            this.tipoProveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +78,14 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // tipoProductoTableAdapter
+            // 
+            this.tipoProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoProveedorTableAdapter
+            // 
+            this.tipoProveedorTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,7 +94,8 @@
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
-            this.Text = "Principal";
+            this.Text = "Sistema de Control Verdulería";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -98,5 +109,7 @@
         private System.Windows.Forms.ToolStripButton frmProveedores;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private PrograIVDataSet1TableAdapters.TipoProductoTableAdapter tipoProductoTableAdapter;
+        private PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter tipoProveedorTableAdapter;
     }
 }

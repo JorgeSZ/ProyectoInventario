@@ -52,6 +52,7 @@
             this.txtContrasenna.Size = new System.Drawing.Size(163, 20);
             this.txtContrasenna.TabIndex = 1;
             this.txtContrasenna.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.txtContrasenna.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtContrasenna_KeyPress);
             // 
             // label1
             // 
