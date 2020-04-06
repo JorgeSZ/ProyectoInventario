@@ -87,4 +87,60 @@ Create table Tipo_Producto(
 	select * from Tipo_Producto
 
 
+	-----------------------------------------------------
+	---Procedimiento Eliminar Producto 
+	-----------------------------------------------------
 
+
+CREATE PROCEDURE [dbo].[Eliminar_Prod]
+	@Id int
+AS
+BEGIN
+	
+	Delete from Producto where idProducto = @Id 
+	
+END
+
+		
+--------------------------------------------------------
+--Procedimiento mostrar productos
+--------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[Mostrar_Prod]
+	
+AS
+BEGIN
+	
+	Select * from Producto  
+	
+END
+GO
+
+--------------------------------------------------------
+--Procedimiento modificar producto
+--------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[Actualizar_Prod]
+		@Id int ,  
+		@descripcionprod Varchar(50) , 
+		@Tipo int , 
+		@Cost decimal (10,2), 
+		@Utilidad decimal (10,2),
+		@proveedor int  
+AS
+BEGIN
+	
+	UPDATE Producto 
+
+	SET 
+		desProducto= @descripcionprod ,
+		codTipoProducto =@Tipo, 
+		costo = @Cost ,
+		porcUtilidad = @Utilidad ,
+		codProveedor = @proveedor 
+		
+
+	WHERE idProducto = @Id;
+	
+END
+GO

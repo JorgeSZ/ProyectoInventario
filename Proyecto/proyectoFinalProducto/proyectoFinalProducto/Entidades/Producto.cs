@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proyectoFinalProducto.Entidades
 {
-    class Producto
+   public class Producto
     {
         public int idProducto { get; set; }
         public string desProducto { get; set; }
