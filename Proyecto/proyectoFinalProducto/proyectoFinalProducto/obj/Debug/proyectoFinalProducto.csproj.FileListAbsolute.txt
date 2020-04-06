@@ -1,0 +1,9 @@
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.csprojAssemblyReference.cache
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.frmProductos.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.Properties.Resources.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.csproj.GenerateResource.cache
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\bin\Debug\proyectoFinalProducto.exe.config
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\bin\Debug\proyectoFinalProducto.exe
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\bin\Debug\proyectoFinalProducto.pdb
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.exe
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto\proyectoFinalProducto\proyectoFinalProducto\obj\Debug\proyectoFinalProducto.pdb

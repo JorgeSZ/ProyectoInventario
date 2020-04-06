@@ -18,5 +18,7 @@ namespace proyectoFinalProducto.Entidades
         public decimal porcUtilidad { get; set; }
 
         public decimal codProveedor { get; set; }
+
+
     }
 }

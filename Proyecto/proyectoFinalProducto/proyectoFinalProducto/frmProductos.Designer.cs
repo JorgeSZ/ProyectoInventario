@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,10 +41,15 @@
             this.txtUtilidad = new System.Windows.Forms.TextBox();
             this.txtCodproveedor = new System.Windows.Forms.TextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proyecto_InventarioDataSet = new proyectoFinalProducto.Proyecto_InventarioDataSet();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.tipo_ProductoTableAdapter = new proyectoFinalProducto.Proyecto_InventarioDataSetTableAdapters.Tipo_ProductoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyecto_InventarioDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,11 +143,26 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tipoProductoBindingSource, "Id", true));
+            this.cmbTipo.DataSource = this.tipoProductoBindingSource;
+            this.cmbTipo.DisplayMember = "TipoProducto";
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(193, 111);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(100, 21);
             this.cmbTipo.TabIndex = 12;
+            this.cmbTipo.ValueMember = "Id";
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            // 
+            // tipoProductoBindingSource
+            // 
+            this.tipoProductoBindingSource.DataMember = "Tipo_Producto";
+            this.tipoProductoBindingSource.DataSource = this.proyecto_InventarioDataSet;
+            // 
+            // proyecto_InventarioDataSet
+            // 
+            this.proyecto_InventarioDataSet.DataSetName = "Proyecto_InventarioDataSet";
+            this.proyecto_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnNuevo
             // 
@@ -180,11 +201,15 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
+            // tipo_ProductoTableAdapter
+            // 
+            this.tipo_ProductoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 450);
+            this.ClientSize = new System.Drawing.Size(770, 559);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -204,6 +229,8 @@
             this.Name = "frmProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.frmProductos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyecto_InventarioDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +254,9 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnConsultar;
+        private Proyecto_InventarioDataSet proyecto_InventarioDataSet;
+        private System.Windows.Forms.BindingSource tipoProductoBindingSource;
+        private Proyecto_InventarioDataSetTableAdapters.Tipo_ProductoTableAdapter tipo_ProductoTableAdapter;
     }
 }
 
