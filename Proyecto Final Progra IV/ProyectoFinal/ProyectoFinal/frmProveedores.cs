@@ -145,7 +145,7 @@ namespace ProyectoFinal
         }
        
 
-        void modificarProducto()
+        void modificarproveedor()
         {
             
             if (txtIdProveedor.Text == string.Empty)
@@ -175,7 +175,7 @@ namespace ProyectoFinal
 
         }
 
-        void eliminarProducto()
+        void eliminarproveedor()
         {
 
             if (txtIdProveedor.Text == string.Empty)
@@ -240,7 +240,7 @@ namespace ProyectoFinal
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            modificarProducto();
+            modificarproveedor();
             limpiarControles();
             actualizargrid();
 
@@ -248,7 +248,7 @@ namespace ProyectoFinal
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            eliminarProducto();
+            eliminarproveedor();
             limpiarControles();
             actualizargrid();
              

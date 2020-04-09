@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
-            this.numFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.subTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet = new ProyectoFinal.PrograIVDataSet();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -66,6 +57,15 @@
             this.cmbTipoPago = new System.Windows.Forms.ComboBox();
             this.tipoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoPagoTableAdapter = new ProyectoFinal.PrograIVDataSetTableAdapters.tipoPagoTableAdapter();
+            this.colnumFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colidProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coltipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colsubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet)).BeginInit();
@@ -78,79 +78,24 @@
             // 
             this.dgvFacturas.AllowUserToAddRows = false;
             this.dgvFacturas.AllowUserToDeleteRows = false;
-            this.dgvFacturas.AutoGenerateColumns = false;
             this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numFacturaDataGridViewTextBoxColumn,
-            this.idProveedorDataGridViewTextBoxColumn,
-            this.fechaFacturaDataGridViewTextBoxColumn,
-            this.tipoPagoDataGridViewTextBoxColumn,
-            this.estadoDataGridViewCheckBoxColumn,
-            this.subTotalDataGridViewTextBoxColumn,
-            this.iVADataGridViewTextBoxColumn,
-            this.descuentoDataGridViewTextBoxColumn,
-            this.totalFacturaDataGridViewTextBoxColumn});
-            this.dgvFacturas.DataSource = this.facturaBindingSource;
-            this.dgvFacturas.Location = new System.Drawing.Point(329, 12);
+            this.colnumFactura,
+            this.colidProveedor,
+            this.colFechaFactura,
+            this.coltipoPago,
+            this.colEstado,
+            this.colsubTotal,
+            this.colIVA,
+            this.colDescuento,
+            this.colTotal});
+            this.dgvFacturas.Location = new System.Drawing.Point(325, 12);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.RowHeadersVisible = false;
-            this.dgvFacturas.Size = new System.Drawing.Size(525, 282);
+            this.dgvFacturas.Size = new System.Drawing.Size(639, 282);
             this.dgvFacturas.TabIndex = 49;
-            // 
-            // numFacturaDataGridViewTextBoxColumn
-            // 
-            this.numFacturaDataGridViewTextBoxColumn.DataPropertyName = "numFactura";
-            this.numFacturaDataGridViewTextBoxColumn.HeaderText = "Factura #";
-            this.numFacturaDataGridViewTextBoxColumn.Name = "numFacturaDataGridViewTextBoxColumn";
-            // 
-            // idProveedorDataGridViewTextBoxColumn
-            // 
-            this.idProveedorDataGridViewTextBoxColumn.DataPropertyName = "idProveedor";
-            this.idProveedorDataGridViewTextBoxColumn.HeaderText = "Proveedor";
-            this.idProveedorDataGridViewTextBoxColumn.Name = "idProveedorDataGridViewTextBoxColumn";
-            // 
-            // fechaFacturaDataGridViewTextBoxColumn
-            // 
-            this.fechaFacturaDataGridViewTextBoxColumn.DataPropertyName = "fechaFactura";
-            this.fechaFacturaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaFacturaDataGridViewTextBoxColumn.Name = "fechaFacturaDataGridViewTextBoxColumn";
-            // 
-            // tipoPagoDataGridViewTextBoxColumn
-            // 
-            this.tipoPagoDataGridViewTextBoxColumn.DataPropertyName = "tipoPago";
-            this.tipoPagoDataGridViewTextBoxColumn.HeaderText = "Tipo Pago";
-            this.tipoPagoDataGridViewTextBoxColumn.Name = "tipoPagoDataGridViewTextBoxColumn";
-            // 
-            // estadoDataGridViewCheckBoxColumn
-            // 
-            this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
-            // 
-            // subTotalDataGridViewTextBoxColumn
-            // 
-            this.subTotalDataGridViewTextBoxColumn.DataPropertyName = "subTotal";
-            this.subTotalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
-            this.subTotalDataGridViewTextBoxColumn.Name = "subTotalDataGridViewTextBoxColumn";
-            // 
-            // iVADataGridViewTextBoxColumn
-            // 
-            this.iVADataGridViewTextBoxColumn.DataPropertyName = "IVA";
-            this.iVADataGridViewTextBoxColumn.HeaderText = "IVA";
-            this.iVADataGridViewTextBoxColumn.Name = "iVADataGridViewTextBoxColumn";
-            // 
-            // descuentoDataGridViewTextBoxColumn
-            // 
-            this.descuentoDataGridViewTextBoxColumn.DataPropertyName = "descuento";
-            this.descuentoDataGridViewTextBoxColumn.HeaderText = "Descuento";
-            this.descuentoDataGridViewTextBoxColumn.Name = "descuentoDataGridViewTextBoxColumn";
-            // 
-            // totalFacturaDataGridViewTextBoxColumn
-            // 
-            this.totalFacturaDataGridViewTextBoxColumn.DataPropertyName = "totalFactura";
-            this.totalFacturaDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalFacturaDataGridViewTextBoxColumn.Name = "totalFacturaDataGridViewTextBoxColumn";
+            this.dgvFacturas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellEnter);
             // 
             // facturaBindingSource
             // 
@@ -164,21 +109,23 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(350, 368);
+            this.btnEliminar.Location = new System.Drawing.Point(593, 368);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(151, 38);
             this.btnEliminar.TabIndex = 48;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(581, 368);
+            this.btnModificar.Location = new System.Drawing.Point(357, 368);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(151, 38);
             this.btnModificar.TabIndex = 47;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -362,11 +309,76 @@
             // 
             this.tipoPagoTableAdapter.ClearBeforeFill = true;
             // 
+            // colnumFactura
+            // 
+            this.colnumFactura.DataPropertyName = "numFactura";
+            this.colnumFactura.HeaderText = "# Factura";
+            this.colnumFactura.Name = "colnumFactura";
+            this.colnumFactura.ReadOnly = true;
+            // 
+            // colidProveedor
+            // 
+            this.colidProveedor.DataPropertyName = "idProveedor";
+            this.colidProveedor.HeaderText = "Proveedor";
+            this.colidProveedor.Name = "colidProveedor";
+            this.colidProveedor.ReadOnly = true;
+            // 
+            // colFechaFactura
+            // 
+            this.colFechaFactura.DataPropertyName = "fechaFactura";
+            this.colFechaFactura.HeaderText = "Fecha Factura";
+            this.colFechaFactura.Name = "colFechaFactura";
+            this.colFechaFactura.ReadOnly = true;
+            // 
+            // coltipoPago
+            // 
+            this.coltipoPago.DataPropertyName = "tipoPago";
+            this.coltipoPago.HeaderText = "Tipo Pago";
+            this.coltipoPago.Name = "coltipoPago";
+            this.coltipoPago.ReadOnly = true;
+            // 
+            // colEstado
+            // 
+            this.colEstado.DataPropertyName = "estado";
+            this.colEstado.HeaderText = "Pagado";
+            this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
+            this.colEstado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colEstado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colsubTotal
+            // 
+            this.colsubTotal.DataPropertyName = "subTotal";
+            this.colsubTotal.HeaderText = "Sub Total";
+            this.colsubTotal.Name = "colsubTotal";
+            this.colsubTotal.ReadOnly = true;
+            // 
+            // colIVA
+            // 
+            this.colIVA.DataPropertyName = "IVA";
+            this.colIVA.HeaderText = "IVA";
+            this.colIVA.Name = "colIVA";
+            this.colIVA.ReadOnly = true;
+            // 
+            // colDescuento
+            // 
+            this.colDescuento.DataPropertyName = "descuento";
+            this.colDescuento.HeaderText = "Descuento";
+            this.colDescuento.Name = "colDescuento";
+            this.colDescuento.ReadOnly = true;
+            // 
+            // colTotal
+            // 
+            this.colTotal.DataPropertyName = "totalFactura";
+            this.colTotal.HeaderText = "Total";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 450);
+            this.ClientSize = new System.Drawing.Size(976, 450);
             this.Controls.Add(this.cmbTipoPago);
             this.Controls.Add(this.chbEstado);
             this.Controls.Add(this.dtpFecha);
@@ -432,14 +444,14 @@
         private System.Windows.Forms.ComboBox cmbTipoPago;
         private System.Windows.Forms.BindingSource tipoPagoBindingSource;
         private PrograIVDataSetTableAdapters.tipoPagoTableAdapter tipoPagoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numFacturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProveedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFacturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoPagoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iVADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descuentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalFacturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colnumFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colidProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coltipoPago;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colsubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIVA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
     }
 }
