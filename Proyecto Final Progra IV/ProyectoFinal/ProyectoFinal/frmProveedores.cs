@@ -48,7 +48,7 @@ namespace ProyectoFinal
                 return false;
             }
         }
-        void consultarProductos()
+        void actualizargrid()
         {
 
             frmPrincipal.listaProveedor.Clear();
@@ -108,7 +108,7 @@ namespace ProyectoFinal
 
         }
 
-        void crearproducto()
+        void crearproveedor()
         {
             try
             { 
@@ -212,7 +212,7 @@ namespace ProyectoFinal
         public frmProveedores()
         {
             InitializeComponent();
-            consultarProductos();
+            actualizargrid();
             
         }
 
@@ -233,16 +233,16 @@ namespace ProyectoFinal
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            crearproducto();
+            crearproveedor();
             limpiarControles();
-            consultarProductos();
+            actualizargrid();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             modificarProducto();
             limpiarControles();
-            consultarProductos();
+            actualizargrid();
 
         }
 
@@ -250,7 +250,7 @@ namespace ProyectoFinal
         {
             eliminarProducto();
             limpiarControles();
-            consultarProductos();
+            actualizargrid();
              
         }
 

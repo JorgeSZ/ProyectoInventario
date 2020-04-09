@@ -8,21 +8,22 @@ namespace ProyectoFinal.Entidades
 {
    public class Factura
     {
-        int numFactura { get; set; }
-        int idProveedor { get; set; }
-        string fechaFactura { get; set; }
-        int tipoPago { get; set; } 
-        string fechaVencimiento { get; set; }
-         double subTotal { get; set; }
+        public int numFactura { get; set; }
+        public int idProveedor { get; set; }
+        public string fechaFactura { get; set; }
+        public int tipoPago { get; set; } 
+        public Boolean estado { get; set; }
+        public double subTotal { get; set; }
 
-        double IVA { get; set; }
-        double descuento { get; set; }
-        double totalFactura { get; set; }
+        public double IVA { get; set; }
+        public double descuento { get; set; }
+        public double totalFactura { get; set; }
 
         
-        public double funcTotal(double sub, double iva, double desc)
+        public double funcTotal()
         {
-            return sub + iva + desc;
+            double total = subTotal + IVA - descuento;
+            return total;
         }
 
     }

@@ -15,10 +15,14 @@ namespace ProyectoFinal
     {
         
         public static List<Proveedor> listaProveedor;
+        public static List<Producto> listaProducto;
+        public static List<Factura> listaFactura;
         public frmPrincipal()
         {
             InitializeComponent();
             listaProveedor = new List<Proveedor>();
+            listaProducto = new List<Producto>();
+            listaFactura = new List<Factura>();
             
         }
 
@@ -49,6 +53,38 @@ namespace ProyectoFinal
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.TipoProducto' Puede moverla o quitarla según sea necesario.
             //this.tipoProductoTableAdapter.Fill(this.prograIVDataSet1.TipoProducto);
 
+        }
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
+        {
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name == "frmProducto")
+                {
+                    return;
+
+                }
+            }
+            frmProducto objfrmproducto = new frmProducto();
+            objfrmproducto.MdiParent = this;
+            objfrmproducto.Dock = DockStyle.Fill;
+            objfrmproducto.Show();
+        }
+
+        private void ToolStripButton3_Click(object sender, EventArgs e)
+        {
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name == "frmFactura")
+                {
+                    return;
+
+                }
+            }
+            frmFactura objfrmFactura = new frmFactura();
+            objfrmFactura.MdiParent = this;
+            objfrmFactura.Dock = DockStyle.Fill;
+            objfrmFactura.Show();
         }
     }
 }
