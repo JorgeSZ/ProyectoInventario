@@ -76,16 +76,29 @@ namespace ProyectoFinal
                 objFactura.IVA = Convert.ToDouble(dr.GetDecimal(6));
                 objFactura.descuento = Convert.ToDouble(dr.GetDecimal(7));
                 objFactura.totalFactura = objFactura.funcTotal();
+                
 
 
                 frmPrincipal.listaFactura.Add(objFactura);
             }
 
             dgvFacturas.DataSource = frmPrincipal.listaFactura;
+            ColorearGrid();
             cnx.Close();
             cnx.Dispose();
         }
 
+        void ColorearGrid()
+        {
+            foreach (DataGridViewRow row in dgvFacturas.Rows)
+                if (Convert.ToBoolean(row.Cells["colEstado"].Value)==true)
+                
+                    row.DefaultCellStyle.BackColor = Color.LightGreen;
+                    else
+                        row.DefaultCellStyle.BackColor = Color.Tomato;
+
+                
+        }
         void limpiarControles()
         {
             txtidProveedor.Text = "";
@@ -280,6 +293,11 @@ namespace ProyectoFinal
             eliminarFactura();
             ActualizarGrid();
             limpiarControles();
+        }
+
+        private void DgvFacturas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            ColorearGrid();
         }
     }
 }

@@ -96,6 +96,7 @@
             this.dgvFacturas.Size = new System.Drawing.Size(639, 282);
             this.dgvFacturas.TabIndex = 49;
             this.dgvFacturas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellEnter);
+            this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvFacturas_CellFormatting);
             // 
             // facturaBindingSource
             // 
