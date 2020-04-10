@@ -17,12 +17,15 @@ namespace ProyectoFinal
         public static List<Proveedor> listaProveedor;
         public static List<Producto> listaProducto;
         public static List<Factura> listaFactura;
+        public static int idbusqueda;
         public frmPrincipal()
         {
             InitializeComponent();
             listaProveedor = new List<Proveedor>();
             listaProducto = new List<Producto>();
             listaFactura = new List<Factura>();
+            
+            
             
         }
 

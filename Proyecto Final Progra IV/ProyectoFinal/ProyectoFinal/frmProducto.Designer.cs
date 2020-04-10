@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.porcUtilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1 = new ProyectoFinal.PrograIVDataSet1();
@@ -51,12 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.productoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.ProductoTableAdapter();
             this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.porcUtilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet1BindingSource)).BeginInit();
@@ -85,6 +86,42 @@
             this.dgvProductos.Size = new System.Drawing.Size(579, 230);
             this.dgvProductos.TabIndex = 33;
             this.dgvProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellEnter);
+            // 
+            // idProducto
+            // 
+            this.idProducto.DataPropertyName = "idProducto";
+            this.idProducto.HeaderText = "ID";
+            this.idProducto.Name = "idProducto";
+            // 
+            // desProducto
+            // 
+            this.desProducto.DataPropertyName = "desProducto";
+            this.desProducto.HeaderText = "Producto";
+            this.desProducto.Name = "desProducto";
+            // 
+            // codTipoProducto
+            // 
+            this.codTipoProducto.DataPropertyName = "codTipoProducto";
+            this.codTipoProducto.HeaderText = "Tipo";
+            this.codTipoProducto.Name = "codTipoProducto";
+            // 
+            // costo
+            // 
+            this.costo.DataPropertyName = "costo";
+            this.costo.HeaderText = "Costo";
+            this.costo.Name = "costo";
+            // 
+            // porcUtilidad
+            // 
+            this.porcUtilidad.DataPropertyName = "porcUtilidad";
+            this.porcUtilidad.HeaderText = "Utilidad";
+            this.porcUtilidad.Name = "porcUtilidad";
+            // 
+            // codProveedor
+            // 
+            this.codProveedor.DataPropertyName = "codProveedor";
+            this.codProveedor.HeaderText = "Proveedor";
+            this.codProveedor.Name = "codProveedor";
             // 
             // productoBindingSource
             // 
@@ -244,47 +281,22 @@
             // 
             this.tipoProductoTableAdapter.ClearBeforeFill = true;
             // 
-            // idProducto
+            // btnBuscar
             // 
-            this.idProducto.DataPropertyName = "idProducto";
-            this.idProducto.HeaderText = "ID";
-            this.idProducto.Name = "idProducto";
-            // 
-            // desProducto
-            // 
-            this.desProducto.DataPropertyName = "desProducto";
-            this.desProducto.HeaderText = "Producto";
-            this.desProducto.Name = "desProducto";
-            // 
-            // codTipoProducto
-            // 
-            this.codTipoProducto.DataPropertyName = "codTipoProducto";
-            this.codTipoProducto.HeaderText = "Tipo";
-            this.codTipoProducto.Name = "codTipoProducto";
-            // 
-            // costo
-            // 
-            this.costo.DataPropertyName = "costo";
-            this.costo.HeaderText = "Costo";
-            this.costo.Name = "costo";
-            // 
-            // porcUtilidad
-            // 
-            this.porcUtilidad.DataPropertyName = "porcUtilidad";
-            this.porcUtilidad.HeaderText = "Utilidad";
-            this.porcUtilidad.Name = "porcUtilidad";
-            // 
-            // codProveedor
-            // 
-            this.codProveedor.DataPropertyName = "codProveedor";
-            this.codProveedor.HeaderText = "Proveedor";
-            this.codProveedor.Name = "codProveedor";
+            this.btnBuscar.Location = new System.Drawing.Point(351, 223);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 51;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 578);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -344,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn porcUtilidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProveedor;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

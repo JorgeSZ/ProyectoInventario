@@ -20,6 +20,7 @@ namespace ProyectoFinal
         SqlConnection cnx; //Declarando el objeto no lo inicializo
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
+        
         public frmFactura()
         {
             InitializeComponent();
@@ -298,6 +299,14 @@ namespace ProyectoFinal
         private void DgvFacturas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             ColorearGrid();
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaProveedor objfrmbusqueda = new frmBusquedaProveedor();
+            objfrmbusqueda.ShowDialog();
+            txtidProveedor.Text = frmPrincipal.idbusqueda.ToString();
+
         }
     }
 }

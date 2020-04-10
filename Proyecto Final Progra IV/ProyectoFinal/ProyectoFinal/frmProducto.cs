@@ -253,5 +253,12 @@ namespace ProyectoFinal
 
 
         }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaProveedor objfrmbusqueda = new frmBusquedaProveedor();
+            objfrmbusqueda.ShowDialog();
+            txtCodproveedor.Text = frmPrincipal.idbusqueda.ToString();
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace ProyectoFinal
                 return false;
             }
         }
-        void actualizargrid()
+        public void actualizargrid()
         {
 
             frmPrincipal.listaProveedor.Clear();
