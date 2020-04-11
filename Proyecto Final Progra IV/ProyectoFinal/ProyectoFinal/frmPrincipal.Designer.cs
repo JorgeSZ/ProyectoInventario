@@ -35,6 +35,8 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
             this.tipoProveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter();
+            this.tsPersonas = new System.Windows.Forms.ToolStripButton();
+            this.tsbUsuarios = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.frmProveedores,
             this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButton3,
+            this.tsPersonas,
+            this.tsbUsuarios});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -88,6 +92,26 @@
             // 
             this.tipoProveedorTableAdapter.ClearBeforeFill = true;
             // 
+            // tsPersonas
+            // 
+            this.tsPersonas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsPersonas.Image = ((System.Drawing.Image)(resources.GetObject("tsPersonas.Image")));
+            this.tsPersonas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsPersonas.Name = "tsPersonas";
+            this.tsPersonas.Size = new System.Drawing.Size(23, 22);
+            this.tsPersonas.Text = "toolStripButton1";
+            this.tsPersonas.Click += new System.EventHandler(this.TsPersonas_Click);
+            // 
+            // tsbUsuarios
+            // 
+            this.tsbUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("tsbUsuarios.Image")));
+            this.tsbUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUsuarios.Name = "tsbUsuarios";
+            this.tsbUsuarios.Size = new System.Drawing.Size(23, 22);
+            this.tsbUsuarios.Text = "Usuarios";
+            this.tsbUsuarios.Click += new System.EventHandler(this.TsbUsuarios_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,5 +137,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private PrograIVDataSet1TableAdapters.TipoProductoTableAdapter tipoProductoTableAdapter;
         private PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter tipoProveedorTableAdapter;
+        private System.Windows.Forms.ToolStripButton tsPersonas;
+        private System.Windows.Forms.ToolStripButton tsbUsuarios;
     }
 }

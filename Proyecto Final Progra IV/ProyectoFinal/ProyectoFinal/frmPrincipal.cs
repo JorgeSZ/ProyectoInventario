@@ -89,5 +89,19 @@ namespace ProyectoFinal
             objfrmFactura.Dock = DockStyle.Fill;
             objfrmFactura.Show();
         }
+
+        private void TsPersonas_Click(object sender, EventArgs e)
+        {
+            Personas objpersonas = new Personas();
+            objpersonas.MdiParent = this;
+            objpersonas.Dock = DockStyle.Fill;
+            objpersonas.Show();
+        }
+
+        private void TsbUsuarios_Click(object sender, EventArgs e)
+        {
+            Usuarios objusuarios = new Usuarios();
+
+        }
     }
 }
