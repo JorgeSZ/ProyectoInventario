@@ -83,7 +83,7 @@ namespace ProyectoFinal
                 cmd.Connection = cnx;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandTimeout = 0;
-                obtenerParametros()
+                obtenerParametros();
                 cmd.CommandText = "SP_AddRegistro";
 
 

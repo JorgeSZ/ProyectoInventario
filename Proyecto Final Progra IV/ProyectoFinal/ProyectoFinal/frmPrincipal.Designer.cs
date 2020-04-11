@@ -33,10 +33,11 @@
             this.frmProveedores = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
-            this.tipoProveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter();
             this.tsPersonas = new System.Windows.Forms.ToolStripButton();
             this.tsbUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
+            this.tipoProveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.toolStripButton2,
             this.toolStripButton3,
             this.tsPersonas,
-            this.tsbUsuarios});
+            this.tsbUsuarios,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -84,14 +86,6 @@
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 
-            // tipoProductoTableAdapter
-            // 
-            this.tipoProductoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tipoProveedorTableAdapter
-            // 
-            this.tipoProveedorTableAdapter.ClearBeforeFill = true;
-            // 
             // tsPersonas
             // 
             this.tsPersonas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -112,6 +106,24 @@
             this.tsbUsuarios.Text = "Usuarios";
             this.tsbUsuarios.Click += new System.EventHandler(this.TsbUsuarios_Click);
             // 
+            // tipoProductoTableAdapter
+            // 
+            this.tipoProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoProveedorTableAdapter
+            // 
+            this.tipoProveedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click_1);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +132,9 @@
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
+            this.ShowInTaskbar = false;
             this.Text = "Sistema de Control Verdulería";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -139,5 +153,6 @@
         private PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter tipoProveedorTableAdapter;
         private System.Windows.Forms.ToolStripButton tsPersonas;
         private System.Windows.Forms.ToolStripButton tsbUsuarios;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

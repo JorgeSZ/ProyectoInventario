@@ -17,6 +17,7 @@ namespace ProyectoFinal
         public static List<Proveedor> listaProveedor;
         public static List<Producto> listaProducto;
         public static List<Factura> listaFactura;
+        public static List<Inventario> listaInventario;
         public static int idbusqueda;
         public frmPrincipal()
         {
@@ -24,6 +25,7 @@ namespace ProyectoFinal
             listaProveedor = new List<Proveedor>();
             listaProducto = new List<Producto>();
             listaFactura = new List<Factura>();
+            listaInventario = new List<Inventario>();
             
             
             
@@ -92,6 +94,15 @@ namespace ProyectoFinal
 
         private void TsPersonas_Click(object sender, EventArgs e)
         {
+
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name == "Personas")
+                {
+                    return;
+
+                }
+            }
             Personas objpersonas = new Personas();
             objpersonas.MdiParent = this;
             objpersonas.Dock = DockStyle.Fill;
@@ -100,8 +111,36 @@ namespace ProyectoFinal
 
         private void TsbUsuarios_Click(object sender, EventArgs e)
         {
-            Usuarios objusuarios = new Usuarios();
 
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name == "Usuarios")
+                {
+                    return;
+
+                }
+            }
+            Usuarios objusuarios = new Usuarios();
+            objusuarios.MdiParent = this;
+            objusuarios.Dock = DockStyle.Fill;
+            objusuarios.Show();
+
+        }
+
+        private void ToolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name == "Inventario")
+                {
+                    return;
+
+                }
+            }
+            frmInventario objinventario = new frmInventario();
+            objinventario.MdiParent = this;
+            objinventario.Dock = DockStyle.Fill;
+            objinventario.Show();
         }
     }
 }

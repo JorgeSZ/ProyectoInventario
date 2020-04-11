@@ -45,3 +45,7 @@ C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\P
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmFactura.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmBusquedaProveedor.resources
+C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.ControlFinanzas.resources
+C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Personas.resources
+C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Usuarios.resources
+C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmInventario.resources

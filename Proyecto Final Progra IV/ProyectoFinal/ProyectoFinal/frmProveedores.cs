@@ -213,6 +213,7 @@ namespace ProyectoFinal
         {
             InitializeComponent();
             actualizargrid();
+            limpiarControles();
             
         }
 

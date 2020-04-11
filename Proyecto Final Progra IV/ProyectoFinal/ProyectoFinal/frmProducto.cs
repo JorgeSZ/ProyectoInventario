@@ -61,17 +61,13 @@ namespace ProyectoFinal
 
         void crearProducto()
         {
-            if (txtIdProducto.Text == string.Empty)
-            {
-                return;
-            }
+           
             establecerConexion();
             cmd = new SqlCommand();
             SqlParameter prm = new SqlParameter();
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "Insertar_Producto";
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = txtIdProducto.Text;
             cmd.Parameters.Add("@descripcionprod", SqlDbType.VarChar, 50).Value = txtDescripcion.Text;
             cmd.Parameters.Add("@Tipo", SqlDbType.Int).Value = cmbTipo.SelectedValue;
             cmd.Parameters.Add("@Cost", SqlDbType.Decimal, 2).Value = Convert.ToDecimal(txtCosto.Text);
@@ -128,7 +124,9 @@ namespace ProyectoFinal
 
         void mostrarProducto()
         {
+            
             frmPrincipal.listaProducto.Clear();
+            dgvProductos.DataSource = new List<Producto>();
             establecerConexion();
             cmd = new SqlCommand();
             cmd.Connection = cnx;
@@ -147,7 +145,7 @@ namespace ProyectoFinal
                 frmPrincipal.listaProducto.Add(objProducto);
 
             }
-            // dgvProductos.DataSource = new List<Producto>();
+           
             dgvProductos.DataSource = frmPrincipal.listaProducto;
             cnx.Close();
             cnx.Dispose();
