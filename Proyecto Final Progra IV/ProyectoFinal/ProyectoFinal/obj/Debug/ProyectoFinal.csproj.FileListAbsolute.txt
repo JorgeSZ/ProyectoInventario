@@ -50,3 +50,27 @@ C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\P
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Usuarios.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmInventario.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmVenta.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.dll
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.xml
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csprojAssemblyReference.cache
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.ControlFinanzas.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmBusquedaProveedor.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmFactura.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmPrincipal.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmProducto.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmProveedores.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmInventario.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmVenta.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Personas.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Usuarios.resources
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
