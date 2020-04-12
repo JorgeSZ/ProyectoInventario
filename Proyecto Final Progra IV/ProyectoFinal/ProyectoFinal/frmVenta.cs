@@ -19,6 +19,8 @@ namespace ProyectoFinal
         List<List<DetalleVenta>> listaVenta;
         DetalleVenta objdetalleventa;
         Producto objProducto = new Producto();
+        List<Inventario> cantstock;
+
         SqlConnection cnx; //Declarando el objeto no lo inicializo
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
@@ -33,7 +35,14 @@ namespace ProyectoFinal
         }
 
         #region Metodos
+        private void obtenerinventario() {
+            frmInventario objinventario = new frmInventario();
+            objinventario.actualizargrid();
 
+            cantstock = new List<Inventario>(); 
+            cantstock=frmPrincipal.listaInventario;
+
+        }
         private bool establecerConexion()
         {
             try
@@ -107,20 +116,36 @@ namespace ProyectoFinal
         void cargargridDetalle()
         {
             dgvVenta.DataSource = new List<DetalleVenta>();
-            objdetalleventa = new DetalleVenta();
+            dgvVenta.DataSource = listadetalleVenta;
 
+        }
+        void agregarDetalle()
+        {
+            objdetalleventa = new DetalleVenta();
             Producto aux = (from n in frmPrincipal.listaProducto
                             where n.idProducto == Convert.ToInt32(txtIDProducto.Text)
                             select n).FirstOrDefault();
+            Inventario auxinv = (from n in this.cantstock
+                                 where n.idProducto == aux.idProducto
+                                 select n).FirstOrDefault();
             try
             {
-                objdetalleventa.idProducto = aux.idProducto;
-                objdetalleventa.desProducto = aux.desProducto;
-                objdetalleventa.precio = objProducto.Precio(Convert.ToDouble(aux.costo), Convert.ToDouble(aux.porcUtilidad));
+
                 if (Convert.ToDouble(txtCantidad.Text) > 0)
-                {
-                    objdetalleventa.cantidad = Convert.ToDouble(txtCantidad.Text);
-                    listadetalleVenta.Add(objdetalleventa);
+                { if (auxinv.cantProducto - Convert.ToDouble(txtCantidad.Text) >= 0)
+                    { auxinv.cantProducto = auxinv.cantProducto - Convert.ToDouble(txtCantidad.Text);
+                        cantstock.Add(auxinv);
+
+                        objdetalleventa.idProducto = aux.idProducto;
+                        objdetalleventa.desProducto = aux.desProducto;
+                        objdetalleventa.cantidad = Convert.ToDouble(txtCantidad.Text);
+                        objdetalleventa.precio = objProducto.Precio(Convert.ToDouble(aux.costo), Convert.ToDouble(aux.porcUtilidad)) * objdetalleventa.cantidad;
+                        listadetalleVenta.Add(objdetalleventa);
+                        lblTotal.Text = (Convert.ToDouble(lblTotal.Text) + objdetalleventa.precio).ToString();
+                    }
+                    else {
+                        MessageBox.Show("No quedan suficientes productos en stock. Cantidad disponible: " + auxinv.cantProducto);
+                                 }
                 }
                 else
                     MessageBox.Show("'Cantidad' debe ser un valor mayor a 0");
@@ -130,14 +155,105 @@ namespace ProyectoFinal
                 MessageBox.Show("El campo 'Cantidad' Solo admite valores numéricos mayores a 0");
 
             }
-            dgvVenta.DataSource = listadetalleVenta;
+        }
+        void eliminarDetalle()
+        { 
+            DetalleVenta aux = (from n in this.listadetalleVenta
+                                where n.idProducto  == Convert.ToInt32(dgvVenta.CurrentRow.Cells["colidProducto"].Value.ToString()) && n.cantidad == Convert.ToDouble(dgvVenta.CurrentRow.Cells["colcantidad"].Value.ToString())
+                                select n).FirstOrDefault();
+            if (aux != null)
+            {
+                Inventario auxinv = (from n in this.cantstock
+                                     where n.idProducto == aux.idProducto
+                                     select n).FirstOrDefault();
+                auxinv.cantProducto = auxinv.cantProducto + aux.cantidad;
+                listadetalleVenta.Remove(aux);
+                lblTotal.Text = (Convert.ToDouble(lblTotal.Text) - objdetalleventa.precio).ToString();
+            }
+            else
+                MessageBox.Show("No quedan más elementos por eliminar");
+            
+            
+        }
 
+        void agregarventa()
+        {
+            try
+            {
+                establecerConexion();
+                cmd = new SqlCommand();
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@total", Convert.ToDouble(lblTotal.Text));
+                cmd.Parameters.AddWithValue("@idVendedor", Form1.idUsuario);
+                cmd.Parameters.Add("@IdVenta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.CommandTimeout = 0;
+                cmd.CommandText = "SP_AddVenta";
+                int ins =cmd.ExecuteNonQuery();
+                if (ins > 0)
+                {
+                    int idventa = Convert.ToInt32(cmd.Parameters["@IdVenta"].Value);
+                    cmd.Parameters.Clear();
+                    foreach (DetalleVenta item in listadetalleVenta)
+                    {
+                        cmd.Parameters.AddWithValue("@idProducto", item.idProducto);
+                        cmd.Parameters.AddWithValue("@ventaid", idventa);
+                        cmd.Parameters.AddWithValue("@cantidad", item.cantidad);
+                        cmd.Parameters.AddWithValue("@precio", item.precio);
+                        cmd.CommandText = "SP_AddDetalle";
+                        ins = cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+
+                    }
+
+                    
+                    if (ins > 0)
+                    {
+                        MessageBox.Show("Guardado correctamente");
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "DBCC CHECKIDENT (DetalleVenta, RESEED, 0)";
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    else
+                        MessageBox.Show("No se pudo guardar la Venta");
+
+                }
+                else
+                    MessageBox.Show("No se pudo guardar la Venta");
+
+            }
+            catch (SqlException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+           
+
+            cnx.Close();
+                cnx.Dispose();
+
+            
+            
+
+        }
+
+        void limpiargridDetalle()
+        {
+            obtenerinventario();
+            listadetalleVenta.Clear();
+            cargargridDetalle();
+            lblTotal.Text = "0";
+            txtCantidad.Clear();
         }
         #endregion
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-
+            obtenerinventario();
+            lblTotal.Text = "0";
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -155,11 +271,36 @@ namespace ProyectoFinal
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            agregarDetalle();
             cargargridDetalle();
+                     
+        }
 
-         
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminarDetalle();
+            cargargridDetalle();
             
+        }
 
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiargridDetalle();
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (listadetalleVenta != null)
+            {
+                agregarventa();
+                limpiargridDetalle();
+
+            }
+            else
+                MessageBox.Show("No se puede guardar pues el detalle está vacío");
+
+
+            
         }
     }
 }

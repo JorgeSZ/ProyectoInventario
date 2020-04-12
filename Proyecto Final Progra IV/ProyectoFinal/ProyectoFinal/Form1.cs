@@ -18,6 +18,7 @@ namespace ProyectoFinal
         SqlConnection cnx; //Declarando el objeto no lo inicializo
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
+        public static int idUsuario { get; set; }
 
         public Form1()
         {
@@ -80,6 +81,7 @@ namespace ProyectoFinal
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
+                idUsuario = dr.GetInt32(0);
                 frmPrincipal form2 = new frmPrincipal();
                 MessageBox.Show("Inicio correcto");
                 this.Hide();
@@ -91,6 +93,7 @@ namespace ProyectoFinal
             {
                 MessageBox.Show("Usuario o contraseña incorrecto");
             }
+            
 
 
         }

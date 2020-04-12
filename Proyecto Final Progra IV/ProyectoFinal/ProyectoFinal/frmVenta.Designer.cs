@@ -31,6 +31,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvVenta = new System.Windows.Forms.DataGridView();
+            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldesProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,11 +49,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIDProducto = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coldesProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
@@ -79,10 +83,38 @@
             this.coldesProducto,
             this.colCantidad,
             this.colPrecio});
-            this.dgvVenta.Location = new System.Drawing.Point(52, 332);
+            this.dgvVenta.Location = new System.Drawing.Point(52, 375);
             this.dgvVenta.Name = "dgvVenta";
-            this.dgvVenta.Size = new System.Drawing.Size(699, 173);
+            this.dgvVenta.Size = new System.Drawing.Size(699, 213);
             this.dgvVenta.TabIndex = 6;
+            // 
+            // colIdProducto
+            // 
+            this.colIdProducto.DataPropertyName = "idProducto";
+            this.colIdProducto.HeaderText = "Id Producto";
+            this.colIdProducto.Name = "colIdProducto";
+            this.colIdProducto.ReadOnly = true;
+            // 
+            // coldesProducto
+            // 
+            this.coldesProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.coldesProducto.DataPropertyName = "desProducto";
+            this.coldesProducto.HeaderText = "Producto";
+            this.coldesProducto.Name = "coldesProducto";
+            this.coldesProducto.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.DataPropertyName = "cantidad";
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "precio";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
             // 
             // dgvBusqueda
             // 
@@ -100,7 +132,7 @@
             this.dgvBusqueda.Location = new System.Drawing.Point(52, 109);
             this.dgvBusqueda.Name = "dgvBusqueda";
             this.dgvBusqueda.RowHeadersVisible = false;
-            this.dgvBusqueda.Size = new System.Drawing.Size(699, 168);
+            this.dgvBusqueda.Size = new System.Drawing.Size(699, 207);
             this.dgvBusqueda.TabIndex = 34;
             this.dgvBusqueda.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBusqueda_CellEnter);
             // 
@@ -153,7 +185,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 299);
+            this.label3.Location = new System.Drawing.Point(75, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 36;
@@ -161,10 +193,10 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(138, 296);
+            this.txtCantidad.Location = new System.Drawing.Point(150, 343);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(199, 20);
-            this.txtCantidad.TabIndex = 35;
+            this.txtCantidad.TabIndex = 5;
             // 
             // cmbFiltrar
             // 
@@ -190,7 +222,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(386, 299);
+            this.label4.Location = new System.Drawing.Point(398, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 39;
@@ -198,64 +230,82 @@
             // 
             // txtIDProducto
             // 
-            this.txtIDProducto.Location = new System.Drawing.Point(456, 296);
+            this.txtIDProducto.Location = new System.Drawing.Point(468, 343);
             this.txtIDProducto.Name = "txtIDProducto";
             this.txtIDProducto.Size = new System.Drawing.Size(123, 20);
-            this.txtIDProducto.TabIndex = 40;
+            this.txtIDProducto.TabIndex = 6;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(609, 299);
+            this.btnAgregar.Location = new System.Drawing.Point(621, 341);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 41;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(52, 606);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 43;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(52, 523);
+            this.btnLimpiar.Location = new System.Drawing.Point(153, 606);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 43;
-            this.btnLimpiar.Text = "button3";
+            this.btnLimpiar.TabIndex = 44;
+            this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
-            // colIdProducto
+            // lblTotal
             // 
-            this.colIdProducto.DataPropertyName = "idProducto";
-            this.colIdProducto.HeaderText = "Id Producto";
-            this.colIdProducto.Name = "colIdProducto";
-            this.colIdProducto.ReadOnly = true;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(954, 375);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(29, 31);
+            this.lblTotal.TabIndex = 46;
+            this.lblTotal.Text = "0";
             // 
-            // coldesProducto
+            // label7
             // 
-            this.coldesProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coldesProducto.DataPropertyName = "desProducto";
-            this.coldesProducto.HeaderText = "Producto";
-            this.coldesProducto.Name = "coldesProducto";
-            this.coldesProducto.ReadOnly = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(809, 375);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 31);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Total: ";
             // 
-            // colCantidad
+            // btnGuardar
             // 
-            this.colCantidad.DataPropertyName = "cantidad";
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.DataPropertyName = "precio";
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(845, 448);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(111, 45);
+            this.btnGuardar.TabIndex = 48;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 542);
+            this.ClientSize = new System.Drawing.Size(1049, 641);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtIDProducto);
             this.Controls.Add(this.label4);
@@ -295,10 +345,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIDProducto;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn coldesProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

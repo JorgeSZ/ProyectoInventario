@@ -17,7 +17,6 @@ namespace ProyectoFinal
 
         SqlConnection cnx; //Declaracion de objetos
         SqlCommand cmd;
-        SqlDataReader dr;
         int total;
 
 
