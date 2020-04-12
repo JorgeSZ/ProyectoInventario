@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.txtidProducto = new System.Windows.Forms.TextBox();
-            this.txtaddProducto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtminProducto = new System.Windows.Forms.TextBox();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaModificación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtidProducto = new System.Windows.Forms.TextBox();
+            this.txtaddProducto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtminProducto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             this.btnActualizar.TabIndex = 49;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // dgvInventario
             // 
@@ -84,36 +85,6 @@
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.Size = new System.Drawing.Size(929, 613);
             this.dgvInventario.TabIndex = 0;
-            // 
-            // txtidProducto
-            // 
-            this.txtidProducto.Location = new System.Drawing.Point(115, 36);
-            this.txtidProducto.Name = "txtidProducto";
-            this.txtidProducto.Size = new System.Drawing.Size(248, 20);
-            this.txtidProducto.TabIndex = 50;
-            // 
-            // txtaddProducto
-            // 
-            this.txtaddProducto.Location = new System.Drawing.Point(115, 119);
-            this.txtaddProducto.Name = "txtaddProducto";
-            this.txtaddProducto.Size = new System.Drawing.Size(248, 20);
-            this.txtaddProducto.TabIndex = 51;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Disminuir Producto";
-            // 
-            // txtminProducto
-            // 
-            this.txtminProducto.Location = new System.Drawing.Point(115, 201);
-            this.txtminProducto.Name = "txtminProducto";
-            this.txtminProducto.Size = new System.Drawing.Size(248, 20);
-            this.txtminProducto.TabIndex = 52;
             // 
             // idProducto
             // 
@@ -149,6 +120,36 @@
             this.fechaModificación.HeaderText = "Fecha Ultima Modificación Manual";
             this.fechaModificación.Name = "fechaModificación";
             this.fechaModificación.ReadOnly = true;
+            // 
+            // txtidProducto
+            // 
+            this.txtidProducto.Location = new System.Drawing.Point(115, 36);
+            this.txtidProducto.Name = "txtidProducto";
+            this.txtidProducto.Size = new System.Drawing.Size(248, 20);
+            this.txtidProducto.TabIndex = 50;
+            // 
+            // txtaddProducto
+            // 
+            this.txtaddProducto.Location = new System.Drawing.Point(115, 119);
+            this.txtaddProducto.Name = "txtaddProducto";
+            this.txtaddProducto.Size = new System.Drawing.Size(248, 20);
+            this.txtaddProducto.TabIndex = 51;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Disminuir Producto";
+            // 
+            // txtminProducto
+            // 
+            this.txtminProducto.Location = new System.Drawing.Point(115, 201);
+            this.txtminProducto.Name = "txtminProducto";
+            this.txtminProducto.Size = new System.Drawing.Size(248, 20);
+            this.txtminProducto.TabIndex = 52;
             // 
             // frmInventario
             // 

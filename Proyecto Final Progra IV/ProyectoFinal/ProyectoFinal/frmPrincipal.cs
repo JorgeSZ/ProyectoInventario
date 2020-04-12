@@ -18,6 +18,9 @@ namespace ProyectoFinal
         public static List<Producto> listaProducto;
         public static List<Factura> listaFactura;
         public static List<Inventario> listaInventario;
+        
+
+
         public static int idbusqueda;
         public frmPrincipal()
         {
@@ -27,28 +30,41 @@ namespace ProyectoFinal
             listaFactura = new List<Factura>();
             listaInventario = new List<Inventario>();
             
-            
-            
+
+
+
+
+        }
+
+        Boolean PestannaAbierta(string frm)
+        {
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.Name ==frm)
+                {
+                    return  true ;
+                    break;   
+                }
+            }
+            return false;
         }
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            
+            frmProveedores objfrmproveedores = new frmProveedores();
+            if (PestannaAbierta(objfrmproveedores.Name)!=true)
             {
-                foreach (Form item in Application.OpenForms)
-                {
-                    if (item.Name == "frmProveedores")
-                    {
-                        return;
-
-                    }
-                }
-
-                frmProveedores objfrmproveedores = new frmProveedores();
+                
                 objfrmproveedores.MdiParent = this;
                 objfrmproveedores.Dock = DockStyle.Fill;
                 objfrmproveedores.Show();
             }
+
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+ 
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -62,85 +78,111 @@ namespace ProyectoFinal
 
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.Name == "frmProducto")
-                {
-                    return;
-
-                }
-            }
             frmProducto objfrmproducto = new frmProducto();
-            objfrmproducto.MdiParent = this;
-            objfrmproducto.Dock = DockStyle.Fill;
-            objfrmproducto.Show();
+            if (PestannaAbierta(objfrmproducto.Name) != true)
+            {
+                objfrmproducto.MdiParent = this;
+                objfrmproducto.Dock = DockStyle.Fill;
+                objfrmproducto.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+
+
         }
 
         private void ToolStripButton3_Click(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.Name == "frmFactura")
-                {
-                    return;
-
-                }
-            }
             frmFactura objfrmFactura = new frmFactura();
-            objfrmFactura.MdiParent = this;
-            objfrmFactura.Dock = DockStyle.Fill;
-            objfrmFactura.Show();
+            if (PestannaAbierta(objfrmFactura.Name) != true)
+            {
+                objfrmFactura.MdiParent = this;
+                objfrmFactura.Dock = DockStyle.Fill;
+                objfrmFactura.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+            
+           
         }
 
         private void TsPersonas_Click(object sender, EventArgs e)
         {
-
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.Name == "Personas")
-                {
-                    return;
-
-                }
-            }
             Personas objpersonas = new Personas();
-            objpersonas.MdiParent = this;
-            objpersonas.Dock = DockStyle.Fill;
-            objpersonas.Show();
+            if (PestannaAbierta(objpersonas.Name) != true)
+            {
+                objpersonas.MdiParent = this;
+                objpersonas.Dock = DockStyle.Fill;
+                objpersonas.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+            
+            
         }
 
         private void TsbUsuarios_Click(object sender, EventArgs e)
         {
-
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.Name == "Usuarios")
-                {
-                    return;
-
-                }
-            }
             Usuarios objusuarios = new Usuarios();
-            objusuarios.MdiParent = this;
-            objusuarios.Dock = DockStyle.Fill;
-            objusuarios.Show();
+            if (PestannaAbierta(objusuarios.Name) != true)
+            {
+                objusuarios.MdiParent = this;
+                objusuarios.Dock = DockStyle.Fill;
+                objusuarios.Show();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
 
         }
 
         private void ToolStripButton1_Click_1(object sender, EventArgs e)
         {
-            foreach (Form item in Application.OpenForms)
-            {
-                if (item.Name == "Inventario")
-                {
-                    return;
-
-                }
-            }
             frmInventario objinventario = new frmInventario();
-            objinventario.MdiParent = this;
-            objinventario.Dock = DockStyle.Fill;
-            objinventario.Show();
+            if (PestannaAbierta(objinventario.Name) != true)
+            {
+                objinventario.MdiParent = this;
+                objinventario.Dock = DockStyle.Fill;
+                objinventario.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+            
+        }
+
+        private void TsbVenta_Click(object sender, EventArgs e)
+        {
+            frmVenta objVenta = new frmVenta();
+            if (PestannaAbierta(objVenta.Name) != true)
+            {
+                objVenta.MdiParent = this;
+                objVenta.Dock = DockStyle.Fill;
+                objVenta.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+
+        
+        
+
         }
     }
 }

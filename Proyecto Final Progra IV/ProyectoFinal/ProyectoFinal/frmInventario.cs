@@ -18,9 +18,13 @@ namespace ProyectoFinal
         SqlConnection cnx; //Declarando el objeto no lo inicializo
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
+        double auminventario;
+        double disinventario;
+        int id;
         public frmInventario()
         {
             InitializeComponent();
+            actualizargrid();
         }
         #region Metodos
 
@@ -50,7 +54,7 @@ namespace ProyectoFinal
         public void actualizargrid()
         {
 
-            frmPrincipal.listaProveedor.Clear();
+            frmPrincipal.listaInventario.Clear();
             dgvInventario.DataSource = new List<Inventario>();
             establecerConexion();
             cmd = new SqlCommand();
@@ -73,21 +77,83 @@ namespace ProyectoFinal
             dgvInventario.DataSource = frmPrincipal.listaInventario;
             cnx.Close();
             cnx.Dispose();
-
-
-
-
         }
 
+        public void modificarinventario()
+        {
+            establecerConexion();
+            cmd = new SqlCommand();
+            cmd.Connection = cnx;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_UpdInventario";
+            try
+            {
+                id = Convert.ToInt32(txtidProducto.Text);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El campo 'ID' solo puede tener valores enteros");
+                
+            }
+            cmd.Parameters.AddWithValue("@idproducto", id);
+            cmd.Parameters.AddWithValue("@cantproductos", this.totalproducto());
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                    MessageBox.Show("Modificación exitosa");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dato no modificado: " + ex.Message);
+            }
+            cnx.Close();
+            cnx.Dispose();
+
+        }
+    
+
+        double totalproducto()
+        {
+            try
+            {
+                auminventario = Convert.ToInt32(txtaddProducto.Text);
+                disinventario = Convert.ToInt32(txtminProducto.Text);
+                
+            }
+
+            catch(Exception)
+            {
+                MessageBox.Show("Por favor verifique los valores ingresados");
+            }
+            return auminventario - disinventario;
+            
+        }
+
+        void limpiarPantalla()
+        {
+            txtidProducto.Text = "";
+            txtaddProducto.Text = "";
+            txtminProducto.Text = "";
+        }
         #endregion
         private void Inventario_Load(object sender, EventArgs e)
         {
-            actualizargrid();
+           
         }
 
         private void Label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            modificarinventario();
+            actualizargrid();
+            limpiarPantalla();
         }
     }
 }

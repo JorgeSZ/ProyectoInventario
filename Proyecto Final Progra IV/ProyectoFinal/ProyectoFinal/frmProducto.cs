@@ -68,11 +68,20 @@ namespace ProyectoFinal
             cmd.Connection = cnx;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "Insertar_Producto";
-            cmd.Parameters.Add("@descripcionprod", SqlDbType.VarChar, 50).Value = txtDescripcion.Text;
-            cmd.Parameters.Add("@Tipo", SqlDbType.Int).Value = cmbTipo.SelectedValue;
-            cmd.Parameters.Add("@Cost", SqlDbType.Decimal, 2).Value = Convert.ToDecimal(txtCosto.Text);
-            cmd.Parameters.Add("@Utilidad ", SqlDbType.Decimal, 2).Value = Convert.ToDecimal(txtUtilidad.Text);
-            cmd.Parameters.Add("@proveedor", SqlDbType.VarChar, 50).Value = txtCodproveedor.Text;
+            try
+            {
+                cmd.Parameters.Add("@descripcionprod", SqlDbType.VarChar, 50).Value = txtDescripcion.Text;
+                cmd.Parameters.Add("@Tipo", SqlDbType.Int).Value = cmbTipo.SelectedValue;
+                cmd.Parameters.Add("@Cost", SqlDbType.Decimal, 2).Value = Convert.ToDecimal(txtCosto.Text);
+                cmd.Parameters.Add("@Utilidad ", SqlDbType.Decimal, 2).Value = Convert.ToDecimal(txtUtilidad.Text);
+                cmd.Parameters.Add("@proveedor", SqlDbType.VarChar, 50).Value = txtCodproveedor.Text;
+            }
+            catch(Exception )
+            {
+                MessageBox.Show("Por Favor verifique los valores ingresados");
+                return;
+            }
+           
             // cmd.ExecuteNonQuery();
 
             try
@@ -122,7 +131,7 @@ namespace ProyectoFinal
 
         }
 
-        void mostrarProducto()
+        public void mostrarProducto()
         {
             
             frmPrincipal.listaProducto.Clear();

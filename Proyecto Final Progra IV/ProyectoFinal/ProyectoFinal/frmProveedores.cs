@@ -83,7 +83,7 @@ namespace ProyectoFinal
         {
             txtIdProveedor.Text = "";
             txtnomProveedor.Text = string.Empty;
-            cmbTipoProveedor.SelectedIndex = 0;
+           // cmbTipoProveedor.SelectedIndex = 0;
             txtIdProveedor.Focus();
         }
 
@@ -190,15 +190,25 @@ namespace ProyectoFinal
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandTimeout = 0;
             cmd.CommandText = "SP_DelProveedor";
-            int cont = cmd.ExecuteNonQuery();
-            if (cont == 1)
+            try
             {
-                MessageBox.Show("Eliminación exitosa");
+                int cont = cmd.ExecuteNonQuery();
+                if (cont == 1)
+                {
+                    MessageBox.Show("Eliminación exitosa");
+                }
+                else
+                {
+                    MessageBox.Show("Eliminación Fallida");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Eliminación Fallida");
+
+                MessageBox.Show("Problema al Eliminar los Datos:" + ex.Message);
             }
+            
+            
             cnx.Close();
             cnx.Dispose();
 

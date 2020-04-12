@@ -19,6 +19,12 @@ namespace ProyectoFinal.Entidades
 
         public decimal codProveedor { get; set; }
 
-
+        public double Precio(double pcosto, double putilidad)
+        {
+            double vprecio = pcosto + pcosto * (putilidad / 100);
+                return vprecio;
+        }
     }
+
+  
 }
