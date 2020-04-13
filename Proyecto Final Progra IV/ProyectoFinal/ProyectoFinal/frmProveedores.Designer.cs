@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
-            this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1 = new ProyectoFinal.PrograIVDataSet1();
@@ -51,6 +48,9 @@
             this.proveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.ProveedorTableAdapter();
             this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet1BindingSource)).BeginInit();
@@ -63,10 +63,13 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(13, 189);
+            this.btnAgregar.FlatAppearance.BorderSize = 3;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(56, 381);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(111, 89);
+            this.btnAgregar.Size = new System.Drawing.Size(162, 36);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -74,37 +77,22 @@
             // 
             // dgvProveedores
             // 
+            this.dgvProveedores.AllowUserToAddRows = false;
+            this.dgvProveedores.AllowUserToDeleteRows = false;
+            this.dgvProveedores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProveedores.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProveedor,
             this.desProveedor,
             this.TipoProveedor});
-            this.dgvProveedores.Location = new System.Drawing.Point(392, 12);
+            this.dgvProveedores.Location = new System.Drawing.Point(725, 64);
+            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dgvProveedores.Name = "dgvProveedores";
-            this.dgvProveedores.Size = new System.Drawing.Size(344, 301);
+            this.dgvProveedores.RowHeadersVisible = false;
+            this.dgvProveedores.Size = new System.Drawing.Size(631, 452);
             this.dgvProveedores.TabIndex = 1;
             this.dgvProveedores.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProveedores_CellEnter);
-            // 
-            // idProveedor
-            // 
-            this.idProveedor.DataPropertyName = "idProveedor";
-            this.idProveedor.HeaderText = "ID";
-            this.idProveedor.Name = "idProveedor";
-            this.idProveedor.ReadOnly = true;
-            // 
-            // desProveedor
-            // 
-            this.desProveedor.DataPropertyName = "desProveedor";
-            this.desProveedor.HeaderText = "Proveedor";
-            this.desProveedor.Name = "desProveedor";
-            this.desProveedor.ReadOnly = true;
-            // 
-            // TipoProveedor
-            // 
-            this.TipoProveedor.DataPropertyName = "codTipoProveedor";
-            this.TipoProveedor.HeaderText = "Tipo";
-            this.TipoProveedor.Name = "TipoProveedor";
-            this.TipoProveedor.ReadOnly = true;
             // 
             // proveedorBindingSource
             // 
@@ -123,10 +111,13 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(133, 189);
+            this.btnModificar.FlatAppearance.BorderSize = 3;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(270, 381);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(111, 89);
+            this.btnModificar.Size = new System.Drawing.Size(162, 36);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -134,10 +125,13 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(253, 189);
+            this.btnEliminar.FlatAppearance.BorderSize = 3;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(502, 381);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(111, 89);
+            this.btnEliminar.Size = new System.Drawing.Size(162, 36);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -146,38 +140,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 40);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "ID Proveedor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 76);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 132);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Proveedor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-1, 112);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(53, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.Size = new System.Drawing.Size(110, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tipo Proveedor";
             // 
             // txtIdProveedor
             // 
-            this.txtIdProveedor.Location = new System.Drawing.Point(116, 40);
+            this.txtIdProveedor.Location = new System.Drawing.Point(213, 64);
+            this.txtIdProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(248, 20);
+            this.txtIdProveedor.Size = new System.Drawing.Size(451, 24);
             this.txtIdProveedor.TabIndex = 7;
             // 
             // cmbTipoProveedor
@@ -186,9 +184,10 @@
             this.cmbTipoProveedor.DataSource = this.tipoProveedorBindingSource1;
             this.cmbTipoProveedor.DisplayMember = "desTipoProveedor";
             this.cmbTipoProveedor.FormattingEnabled = true;
-            this.cmbTipoProveedor.Location = new System.Drawing.Point(116, 112);
+            this.cmbTipoProveedor.Location = new System.Drawing.Point(213, 188);
+            this.cmbTipoProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.cmbTipoProveedor.Name = "cmbTipoProveedor";
-            this.cmbTipoProveedor.Size = new System.Drawing.Size(248, 21);
+            this.cmbTipoProveedor.Size = new System.Drawing.Size(451, 25);
             this.cmbTipoProveedor.TabIndex = 9;
             this.cmbTipoProveedor.ValueMember = "idTipoProveedor";
             // 
@@ -204,9 +203,10 @@
             // 
             // txtnomProveedor
             // 
-            this.txtnomProveedor.Location = new System.Drawing.Point(116, 76);
+            this.txtnomProveedor.Location = new System.Drawing.Point(213, 126);
+            this.txtnomProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtnomProveedor.Name = "txtnomProveedor";
-            this.txtnomProveedor.Size = new System.Drawing.Size(248, 20);
+            this.txtnomProveedor.Size = new System.Drawing.Size(451, 24);
             this.txtnomProveedor.TabIndex = 8;
             this.txtnomProveedor.TextChanged += new System.EventHandler(this.TxtnomProveedor_TextChanged);
             // 
@@ -228,11 +228,36 @@
             this.proveedorBindingSource1.DataMember = "Proveedor";
             this.proveedorBindingSource1.DataSource = this.prograIVDataSet1BindingSource;
             // 
+            // idProveedor
+            // 
+            this.idProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idProveedor.DataPropertyName = "idProveedor";
+            this.idProveedor.HeaderText = "ID";
+            this.idProveedor.Name = "idProveedor";
+            this.idProveedor.ReadOnly = true;
+            // 
+            // desProveedor
+            // 
+            this.desProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.desProveedor.DataPropertyName = "desProveedor";
+            this.desProveedor.HeaderText = "Proveedor";
+            this.desProveedor.Name = "desProveedor";
+            this.desProveedor.ReadOnly = true;
+            // 
+            // TipoProveedor
+            // 
+            this.TipoProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoProveedor.DataPropertyName = "codTipoProveedor";
+            this.TipoProveedor.HeaderText = "Tipo";
+            this.TipoProveedor.Name = "TipoProveedor";
+            this.TipoProveedor.ReadOnly = true;
+            // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 371);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(1418, 600);
             this.Controls.Add(this.txtnomProveedor);
             this.Controls.Add(this.cmbTipoProveedor);
             this.Controls.Add(this.txtIdProveedor);
@@ -243,6 +268,9 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.btnAgregar);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProveedores";

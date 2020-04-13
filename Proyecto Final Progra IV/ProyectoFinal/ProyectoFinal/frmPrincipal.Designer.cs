@@ -142,14 +142,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
+            this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.ShowInTaskbar = false;
             this.Text = "Sistema de Control Verdulería";
-            this.TransparencyKey = System.Drawing.Color.Silver;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.toolStrip1.ResumeLayout(false);
