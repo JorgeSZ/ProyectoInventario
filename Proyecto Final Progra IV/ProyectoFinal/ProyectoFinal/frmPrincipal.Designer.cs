@@ -1,4 +1,5 @@
-﻿namespace ProyectoFinal
+﻿// Original
+namespace ProyectoFinal
 {
     partial class frmPrincipal
     {
@@ -28,15 +29,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnProveedores = new System.Windows.Forms.ToolStripButton();
+            this.tsbVenta = new System.Windows.Forms.ToolStripButton();
+            this.tsbInventario = new System.Windows.Forms.ToolStripButton();
+            this.tsbReportes = new System.Windows.Forms.ToolStripButton();
+            this.tsbGastos = new System.Windows.Forms.ToolStripButton();
             this.tsbProducto = new System.Windows.Forms.ToolStripButton();
             this.tsbFactura = new System.Windows.Forms.ToolStripButton();
+            this.btnProveedores = new System.Windows.Forms.ToolStripButton();
             this.tsPersonas = new System.Windows.Forms.ToolStripButton();
             this.tsbUsuarios = new System.Windows.Forms.ToolStripButton();
-            this.tsbInventario = new System.Windows.Forms.ToolStripButton();
-            this.tsbVenta = new System.Windows.Forms.ToolStripButton();
             this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
             this.tipoProveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProveedorTableAdapter();
             this.toolStrip1.SuspendLayout();
@@ -44,91 +46,152 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.AutoSize = false;
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnProveedores,
+            this.tsbVenta,
+            this.tsbInventario,
+            this.tsbReportes,
+            this.tsbGastos,
             this.tsbProducto,
             this.tsbFactura,
+            this.btnProveedores,
             this.tsPersonas,
-            this.tsbUsuarios,
-            this.tsbInventario,
-            this.tsbVenta});
+            this.tsbUsuarios});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 10, 1, 10);
-            this.toolStrip1.Size = new System.Drawing.Size(800, 43);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 5, 1);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(1246, 80);
+            this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnProveedores
+            // tsbVenta
             // 
-            this.btnProveedores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
-            this.btnProveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(23, 20);
-            this.btnProveedores.Text = "btnProveedores";
-            this.btnProveedores.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            this.tsbVenta.AutoSize = false;
+            this.tsbVenta.Image = global::ProyectoFinal.Properties.Resources.venta;
+            this.tsbVenta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbVenta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbVenta.Name = "tsbVenta";
+            this.tsbVenta.Size = new System.Drawing.Size(70, 70);
+            this.tsbVenta.Text = "Venta";
+            this.tsbVenta.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tsbVenta.Click += new System.EventHandler(this.TsbVenta_Click);
+            // 
+            // tsbInventario
+            // 
+            this.tsbInventario.AutoSize = false;
+            this.tsbInventario.Image = global::ProyectoFinal.Properties.Resources.inventario;
+            this.tsbInventario.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbInventario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbInventario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInventario.Name = "tsbInventario";
+            this.tsbInventario.Size = new System.Drawing.Size(70, 70);
+            this.tsbInventario.Text = "Inventario";
+            this.tsbInventario.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tsbInventario.Click += new System.EventHandler(this.ToolStripButton1_Click_1);
+            // 
+            // tsbReportes
+            // 
+            this.tsbReportes.AutoSize = false;
+            this.tsbReportes.Image = global::ProyectoFinal.Properties.Resources.reportes;
+            this.tsbReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReportes.Name = "tsbReportes";
+            this.tsbReportes.Size = new System.Drawing.Size(70, 70);
+            this.tsbReportes.Text = "Reportes";
+            this.tsbReportes.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tsbReportes.Click += new System.EventHandler(this.TsbReportes_Click);
+            // 
+            // tsbGastos
+            // 
+            this.tsbGastos.AutoSize = false;
+            this.tsbGastos.Image = global::ProyectoFinal.Properties.Resources.gastos;
+            this.tsbGastos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbGastos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGastos.Name = "tsbGastos";
+            this.tsbGastos.Size = new System.Drawing.Size(70, 70);
+            this.tsbGastos.Text = "Gastos";
+            this.tsbGastos.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbGastos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tsbGastos.Click += new System.EventHandler(this.TsbGastos_Click);
             // 
             // tsbProducto
             // 
-            this.tsbProducto.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbProducto.Image = ((System.Drawing.Image)(resources.GetObject("tsbProducto.Image")));
+            this.tsbProducto.AutoSize = false;
+            this.tsbProducto.Image = global::ProyectoFinal.Properties.Resources.Productos;
+            this.tsbProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsbProducto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbProducto.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbProducto.Name = "tsbProducto";
-            this.tsbProducto.Size = new System.Drawing.Size(23, 20);
+            this.tsbProducto.Size = new System.Drawing.Size(70, 70);
             this.tsbProducto.Text = "Producto";
+            this.tsbProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsbProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tsbProducto.Click += new System.EventHandler(this.ToolStripButton2_Click);
             // 
             // tsbFactura
             // 
-            this.tsbFactura.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbFactura.Image = ((System.Drawing.Image)(resources.GetObject("tsbFactura.Image")));
+            this.tsbFactura.AutoSize = false;
+            this.tsbFactura.Image = global::ProyectoFinal.Properties.Resources.factura;
+            this.tsbFactura.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.tsbFactura.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbFactura.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbFactura.Name = "tsbFactura";
-            this.tsbFactura.Size = new System.Drawing.Size(23, 20);
-            this.tsbFactura.Text = "tsbFactura";
+            this.tsbFactura.Size = new System.Drawing.Size(70, 70);
+            this.tsbFactura.Text = "Factura";
+            this.tsbFactura.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbFactura.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tsbFactura.Click += new System.EventHandler(this.ToolStripButton3_Click);
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.AutoSize = false;
+            this.btnProveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProveedores.Image = global::ProyectoFinal.Properties.Resources.Proveedores;
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnProveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnProveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(72, 70);
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnProveedores.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // tsPersonas
             // 
-            this.tsPersonas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsPersonas.Image = ((System.Drawing.Image)(resources.GetObject("tsPersonas.Image")));
+            this.tsPersonas.AutoSize = false;
+            this.tsPersonas.Image = global::ProyectoFinal.Properties.Resources.Personas;
+            this.tsPersonas.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.tsPersonas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsPersonas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsPersonas.Name = "tsPersonas";
-            this.tsPersonas.Size = new System.Drawing.Size(23, 20);
+            this.tsPersonas.Size = new System.Drawing.Size(70, 70);
             this.tsPersonas.Text = "Personas";
+            this.tsPersonas.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsPersonas.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tsPersonas.Click += new System.EventHandler(this.TsPersonas_Click);
             // 
             // tsbUsuarios
             // 
-            this.tsbUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("tsbUsuarios.Image")));
+            this.tsbUsuarios.AutoSize = false;
+            this.tsbUsuarios.Image = global::ProyectoFinal.Properties.Resources.usuarios;
+            this.tsbUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsbUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUsuarios.Name = "tsbUsuarios";
-            this.tsbUsuarios.Size = new System.Drawing.Size(23, 20);
+            this.tsbUsuarios.Size = new System.Drawing.Size(70, 70);
             this.tsbUsuarios.Text = "Usuarios";
+            this.tsbUsuarios.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.tsbUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tsbUsuarios.Click += new System.EventHandler(this.TsbUsuarios_Click);
-            // 
-            // tsbInventario
-            // 
-            this.tsbInventario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbInventario.Image = ((System.Drawing.Image)(resources.GetObject("tsbInventario.Image")));
-            this.tsbInventario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbInventario.Name = "tsbInventario";
-            this.tsbInventario.Size = new System.Drawing.Size(23, 20);
-            this.tsbInventario.Text = "Inventario";
-            this.tsbInventario.Click += new System.EventHandler(this.ToolStripButton1_Click_1);
-            // 
-            // tsbVenta
-            // 
-            this.tsbVenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbVenta.Image = ((System.Drawing.Image)(resources.GetObject("tsbVenta.Image")));
-            this.tsbVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbVenta.Name = "tsbVenta";
-            this.tsbVenta.Size = new System.Drawing.Size(23, 20);
-            this.tsbVenta.Text = "Venta";
-            this.tsbVenta.Click += new System.EventHandler(this.TsbVenta_Click);
             // 
             // tipoProductoTableAdapter
             // 
@@ -142,8 +205,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(1246, 655);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
@@ -154,7 +217,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,5 +232,7 @@
         private System.Windows.Forms.ToolStripButton tsbUsuarios;
         private System.Windows.Forms.ToolStripButton tsbInventario;
         private System.Windows.Forms.ToolStripButton tsbVenta;
+        private System.Windows.Forms.ToolStripButton tsbGastos;
+        private System.Windows.Forms.ToolStripButton tsbReportes;
     }
 }

@@ -58,6 +58,7 @@
             this.productoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.ProductoTableAdapter();
             this.tipoProductoTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.TipoProductoTableAdapter();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet1BindingSource)).BeginInit();
@@ -84,7 +85,7 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.Size = new System.Drawing.Size(953, 414);
-            this.dgvProductos.TabIndex = 33;
+            this.dgvProductos.TabIndex = 11;
             this.dgvProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellEnter);
             // 
             // idProducto
@@ -143,11 +144,11 @@
             this.btnEliminar.FlatAppearance.BorderSize = 3;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(240, 486);
+            this.btnEliminar.Location = new System.Drawing.Point(241, 512);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(162, 36);
-            this.btnEliminar.TabIndex = 32;
+            this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -157,11 +158,11 @@
             this.btnModificar.FlatAppearance.BorderSize = 3;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(464, 486);
+            this.btnModificar.Location = new System.Drawing.Point(465, 512);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(162, 36);
-            this.btnModificar.TabIndex = 31;
+            this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -171,11 +172,11 @@
             this.btnNuevo.FlatAppearance.BorderSize = 3;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(30, 486);
+            this.btnNuevo.Location = new System.Drawing.Point(31, 512);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(162, 36);
-            this.btnNuevo.TabIndex = 30;
+            this.btnNuevo.TabIndex = 8;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -190,7 +191,7 @@
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(180, 25);
-            this.cmbTipo.TabIndex = 29;
+            this.cmbTipo.TabIndex = 3;
             this.cmbTipo.ValueMember = "idTipoProducto";
             // 
             // tipoProductoBindingSource
@@ -205,7 +206,7 @@
             this.txtCodproveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtCodproveedor.Name = "txtCodproveedor";
             this.txtCodproveedor.Size = new System.Drawing.Size(180, 24);
-            this.txtCodproveedor.TabIndex = 28;
+            this.txtCodproveedor.TabIndex = 6;
             // 
             // txtUtilidad
             // 
@@ -214,7 +215,7 @@
             this.txtUtilidad.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtUtilidad.Name = "txtUtilidad";
             this.txtUtilidad.Size = new System.Drawing.Size(180, 24);
-            this.txtUtilidad.TabIndex = 27;
+            this.txtUtilidad.TabIndex = 5;
             // 
             // txtCosto
             // 
@@ -223,7 +224,7 @@
             this.txtCosto.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(180, 24);
-            this.txtCosto.TabIndex = 26;
+            this.txtCosto.TabIndex = 4;
             // 
             // txtDescripcion
             // 
@@ -232,7 +233,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 24);
-            this.txtDescripcion.TabIndex = 25;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtIdProducto
             // 
@@ -241,7 +242,7 @@
             this.txtIdProducto.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(180, 24);
-            this.txtIdProducto.TabIndex = 24;
+            this.txtIdProducto.TabIndex = 1;
             // 
             // label6
             // 
@@ -322,14 +323,28 @@
             this.btnBuscar.FlatAppearance.BorderSize = 3;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(669, 486);
+            this.btnBuscar.Location = new System.Drawing.Point(220, 442);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(162, 36);
-            this.btnBuscar.TabIndex = 51;
+            this.btnBuscar.Size = new System.Drawing.Size(87, 34);
+            this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.FlatAppearance.BorderSize = 3;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.btnCerrar.Location = new System.Drawing.Point(1291, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(39, 34);
+            this.btnCerrar.TabIndex = 52;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // frmProducto
             // 
@@ -337,6 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1370, 581);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
@@ -356,6 +372,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmProducto";
             this.Text = "frmProducto";
@@ -401,5 +418,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn porcUtilidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProveedor;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

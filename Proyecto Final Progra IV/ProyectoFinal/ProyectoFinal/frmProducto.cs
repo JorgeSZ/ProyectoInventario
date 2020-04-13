@@ -26,11 +26,12 @@ namespace ProyectoFinal
             mostrarProducto();
         }
 
+        //métodos a utilizar.
         #region "Metodos"
 
 
 
-
+            //Establece la conexión con la BD
         private bool establecerConexion()
         {
             try
@@ -58,7 +59,7 @@ namespace ProyectoFinal
 
         }
 
-
+        //Método que Permite crear un producto
         void crearProducto()
         {
            
@@ -100,6 +101,7 @@ namespace ProyectoFinal
 
         }
 
+        //Método que Permite eliminar un producto
         void eliminarProducto()
         {
             if (txtIdProducto.Text == string.Empty)
@@ -131,6 +133,7 @@ namespace ProyectoFinal
 
         }
 
+        //Método que permite mostrar los productos en el grid.
         public void mostrarProducto()
         {
             
@@ -162,6 +165,7 @@ namespace ProyectoFinal
 
         }
 
+        //Método que permite limpiar los controles del formulario.
         void limpiarPantalla()
         {
             txtIdProducto.Text = String.Empty;
@@ -170,8 +174,10 @@ namespace ProyectoFinal
             txtUtilidad.Text = String.Empty;
             txtCodproveedor.Text = String.Empty;
             cmbTipo.SelectedIndex = 0;
+            txtIdProducto.Focus();
         }
 
+        //Método que permite modificar un producto.
         void modificarProducto()
         {
             establecerConexion();
@@ -204,12 +210,17 @@ namespace ProyectoFinal
 
         #endregion
 
+
+        // Conjunto de eventos que se aplican en el formulario.
+
+            // Eventos click hacen se activan al dar click a un botón del formulario.
         private void FrmProducto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.TipoProducto' Puede moverla o quitarla según sea necesario.
             this.tipoProductoTableAdapter.Fill(this.prograIVDataSet1.TipoProducto);
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.prograIVDataSet1.Producto);
+            limpiarPantalla();
 
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -224,6 +235,7 @@ namespace ProyectoFinal
 
            // this.tipo_ProductoTableAdapter.Fill(this.proyecto_InventarioDataSet.Tipo_Producto);
             mostrarProducto();
+            txtIdProducto.Focus();
 
         }
 
@@ -247,6 +259,7 @@ namespace ProyectoFinal
 
         }
 
+        //Este método permite cargar los datos de una fila seleccionada en el grid a los controles del formulario.
         private void DgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             txtIdProducto.Text = dgvProductos.CurrentRow.Cells["idProducto"].Value.ToString();
@@ -266,6 +279,11 @@ namespace ProyectoFinal
             frmBusquedaProveedor objfrmbusqueda = new frmBusquedaProveedor();
             objfrmbusqueda.ShowDialog();
             txtCodproveedor.Text = frmPrincipal.idbusqueda.ToString();
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

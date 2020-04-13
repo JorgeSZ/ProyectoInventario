@@ -179,7 +179,7 @@ namespace ProyectoFinal
             txtUsuario.Text = string.Empty; //limpia las cajas de texto
             txtContrasenna.Text = string.Empty;
             txtIdPersona.Text = string.Empty;
-            
+            txtUsuario.Focus();
         }
 
 
@@ -193,7 +193,7 @@ namespace ProyectoFinal
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Focus();
             establecerConexion();
 
             consultaUsuarios();
@@ -256,6 +256,11 @@ namespace ProyectoFinal
             consultaUsuarios();
             limpiarControles();
 
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

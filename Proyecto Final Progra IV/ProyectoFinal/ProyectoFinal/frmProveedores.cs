@@ -24,7 +24,10 @@ namespace ProyectoFinal
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
 
+        // conjunto de métodos a utilizar.
         #region "Metodos"
+            
+            // establece la conexión con la BD
         private bool establecerConexion()
         {
             try
@@ -48,6 +51,8 @@ namespace ProyectoFinal
                 return false;
             }
         }
+
+        //Actualiza el grid del formulario.
         public void actualizargrid()
         {
 
@@ -79,6 +84,7 @@ namespace ProyectoFinal
 
         }
 
+        //permite limpiar los controles del formulario.
         void limpiarControles()
         {
             txtIdProveedor.Text = "";
@@ -87,6 +93,7 @@ namespace ProyectoFinal
             txtIdProveedor.Focus();
         }
 
+        //Obtiene los parametros necesarios para enviar a la BD en los distintos métodos.
         void obtenerparametros()
         {
             try
@@ -108,6 +115,7 @@ namespace ProyectoFinal
 
         }
 
+        //Método utilizado para crear un proveedor.
         void crearproveedor()
         {
             try
@@ -144,7 +152,7 @@ namespace ProyectoFinal
 
         }
        
-
+        //Método utilizado para modificar un proveedor.
         void modificarproveedor()
         {
             
@@ -175,6 +183,7 @@ namespace ProyectoFinal
 
         }
 
+        //Método utilizado para eliminar un proveedor.
         void eliminarproveedor()
         {
 
@@ -227,8 +236,10 @@ namespace ProyectoFinal
             
         }
 
+        // Eventos utilizados por el formulario.
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
+            limpiarControles();
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.Proveedor' Puede moverla o quitarla según sea necesario.
             this.proveedorTableAdapter.Fill(this.prograIVDataSet1.Proveedor);
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet1.TipoProveedor' Puede moverla o quitarla según sea necesario.
@@ -271,6 +282,11 @@ namespace ProyectoFinal
             txtIdProveedor.Text = dgvProveedores.CurrentRow.Cells["idProveedor"].Value.ToString();
             cmbTipoProveedor.SelectedValue = dgvProveedores.CurrentRow.Cells["TipoProveedor"].Value.ToString();
 
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

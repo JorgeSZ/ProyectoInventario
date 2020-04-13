@@ -45,7 +45,6 @@ C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\P
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmFactura.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmBusquedaProveedor.resources
-C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.ControlFinanzas.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Personas.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Usuarios.resources
 C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmInventario.resources
@@ -74,3 +73,4 @@ C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyec
 C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
 C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Users\pr-de\Documents\Dennis\UIA Ingenieria de software\Programacion 4\Proyecto\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Jeikelyn\Documents\GitHub\ProyectoInventario\Proyecto Final Progra IV\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.frmGastos.resources

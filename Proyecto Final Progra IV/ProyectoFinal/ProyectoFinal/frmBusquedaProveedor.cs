@@ -19,6 +19,7 @@ namespace ProyectoFinal
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
 
+        //Establece la conexión con la Base de Datos
         private bool establecerConexion()
         {
             try
@@ -43,13 +44,16 @@ namespace ProyectoFinal
             }
         }
 
+        //Carga el grid de datos
+
         void cargargrid()
         {
             frmProveedores objfrmproveedores = new frmProveedores();
-            objfrmproveedores.actualizargrid();    
+            objfrmproveedores.actualizargrid();//Por ser un grid de proveedores, ejecuto el metodo actualizar grid en frm proveedores para cargar el grid.    
             dgvBusqueda.DataSource = frmPrincipal.listaProveedor;
         }
 
+        //permite filtrar por medio de texto.
         void filtrargrid()
         {
             frmPrincipal.listaProveedor.Clear();
@@ -84,6 +88,7 @@ namespace ProyectoFinal
 
         }
 
+        //Este evento permite llamar el método cargar grid cada vez que se cambia el texto de txtnomproveedor.
         private void TxtnomProveedor_TextChanged(object sender, EventArgs e)
         {
             
@@ -115,6 +120,11 @@ namespace ProyectoFinal
             frmPrincipal.idbusqueda = Convert.ToInt32(dgvBusqueda.CurrentRow.Cells["colidProveedor"].Value.ToString());
             this.Close();
             
+        }
+
+        private void FrmBusquedaProveedor_Load(object sender, EventArgs e)
+        {
+            txtnomProveedor.Focus();
         }
     }
 }

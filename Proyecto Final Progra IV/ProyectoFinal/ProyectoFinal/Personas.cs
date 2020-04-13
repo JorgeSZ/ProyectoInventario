@@ -183,6 +183,7 @@ namespace ProyectoFinal
             txtNombre.Text = string.Empty;
             txtApe1.Text = string.Empty;
             txtApe2.Text = string.Empty;
+            txtId.Focus();
            
         }
 
@@ -191,8 +192,10 @@ namespace ProyectoFinal
         private void Personas_Load(object sender, EventArgs e)
         {
             establecerConexion();
-            
+            txtId.Focus();
             consultaPersonas();
+            dtpFecha.MaxDate = DateTime.Now;
+            dtpFecha.Value = DateTime.Now;
             
         }
 
@@ -255,6 +258,12 @@ namespace ProyectoFinal
             eliminaPersona();
             consultaPersonas();
             limpiarControles();
+
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

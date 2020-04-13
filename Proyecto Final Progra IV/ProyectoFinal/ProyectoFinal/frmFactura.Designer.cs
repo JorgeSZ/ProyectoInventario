@@ -66,6 +66,7 @@
             this.cmbTipoPago = new System.Windows.Forms.ComboBox();
             this.tipoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoPagoTableAdapter = new ProyectoFinal.PrograIVDataSetTableAdapters.tipoPagoTableAdapter();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet)).BeginInit();
@@ -96,7 +97,7 @@
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.RowHeadersVisible = false;
             this.dgvFacturas.Size = new System.Drawing.Size(898, 467);
-            this.dgvFacturas.TabIndex = 49;
+            this.dgvFacturas.TabIndex = 13;
             this.dgvFacturas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellEnter);
             this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvFacturas_CellFormatting);
             // 
@@ -183,7 +184,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(162, 36);
-            this.btnEliminar.TabIndex = 48;
+            this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -196,7 +197,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(162, 36);
-            this.btnModificar.TabIndex = 47;
+            this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
@@ -209,7 +210,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(5);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(162, 36);
-            this.btnNuevo.TabIndex = 46;
+            this.btnNuevo.TabIndex = 10;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
@@ -220,7 +221,7 @@
             this.txtsubTotal.Margin = new System.Windows.Forms.Padding(5);
             this.txtsubTotal.Name = "txtsubTotal";
             this.txtsubTotal.Size = new System.Drawing.Size(164, 23);
-            this.txtsubTotal.TabIndex = 44;
+            this.txtsubTotal.TabIndex = 7;
             // 
             // txtidProveedor
             // 
@@ -228,7 +229,7 @@
             this.txtidProveedor.Margin = new System.Windows.Forms.Padding(5);
             this.txtidProveedor.Name = "txtidProveedor";
             this.txtidProveedor.Size = new System.Drawing.Size(164, 23);
-            this.txtidProveedor.TabIndex = 41;
+            this.txtidProveedor.TabIndex = 2;
             // 
             // txtnumFactura
             // 
@@ -236,7 +237,7 @@
             this.txtnumFactura.Margin = new System.Windows.Forms.Padding(5);
             this.txtnumFactura.Name = "txtnumFactura";
             this.txtnumFactura.Size = new System.Drawing.Size(164, 23);
-            this.txtnumFactura.TabIndex = 40;
+            this.txtnumFactura.TabIndex = 1;
             // 
             // label6
             // 
@@ -320,7 +321,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 28);
-            this.btnBuscar.TabIndex = 50;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
@@ -331,7 +332,8 @@
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(164, 23);
-            this.txtDescuento.TabIndex = 52;
+            this.txtDescuento.TabIndex = 9;
+            this.txtDescuento.TextChanged += new System.EventHandler(this.TxtDescuento_TextChanged);
             // 
             // label7
             // 
@@ -349,7 +351,7 @@
             this.txtIVA.Margin = new System.Windows.Forms.Padding(5);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(164, 23);
-            this.txtIVA.TabIndex = 54;
+            this.txtIVA.TabIndex = 8;
             // 
             // label8
             // 
@@ -371,7 +373,7 @@
             this.dtpFecha.MinDate = new System.DateTime(1985, 6, 20, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(164, 23);
-            this.dtpFecha.TabIndex = 55;
+            this.dtpFecha.TabIndex = 4;
             this.dtpFecha.Value = new System.DateTime(2020, 4, 8, 0, 0, 0, 0);
             // 
             // chbEstado
@@ -381,7 +383,7 @@
             this.chbEstado.Margin = new System.Windows.Forms.Padding(5);
             this.chbEstado.Name = "chbEstado";
             this.chbEstado.Size = new System.Drawing.Size(76, 21);
-            this.chbEstado.TabIndex = 56;
+            this.chbEstado.TabIndex = 6;
             this.chbEstado.Text = "Pagado";
             this.chbEstado.UseVisualStyleBackColor = true;
             // 
@@ -394,7 +396,7 @@
             this.cmbTipoPago.Margin = new System.Windows.Forms.Padding(5);
             this.cmbTipoPago.Name = "cmbTipoPago";
             this.cmbTipoPago.Size = new System.Drawing.Size(164, 25);
-            this.cmbTipoPago.TabIndex = 57;
+            this.cmbTipoPago.TabIndex = 5;
             this.cmbTipoPago.ValueMember = "idTipoPago";
             // 
             // tipoPagoBindingSource
@@ -406,12 +408,27 @@
             // 
             this.tipoPagoTableAdapter.ClearBeforeFill = true;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.FlatAppearance.BorderSize = 3;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.btnCerrar.Location = new System.Drawing.Point(1319, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(39, 34);
+            this.btnCerrar.TabIndex = 58;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1370, 727);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.cmbTipoPago);
             this.Controls.Add(this.chbEstado);
             this.Controls.Add(this.dtpFecha);
@@ -435,8 +452,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmFactura";
+            this.ShowIcon = false;
             this.Text = "frmFactura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
@@ -489,5 +508,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colIVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

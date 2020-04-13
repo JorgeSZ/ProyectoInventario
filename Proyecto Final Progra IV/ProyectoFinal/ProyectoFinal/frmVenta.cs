@@ -15,6 +15,7 @@ namespace ProyectoFinal
 {
     public partial class frmVenta : Form
     {
+        //Declara las variables a utilizar.
         List<DetalleVenta> listadetalleVenta;
         List<List<DetalleVenta>> listaVenta;
         DetalleVenta objdetalleventa;
@@ -35,14 +36,20 @@ namespace ProyectoFinal
         }
 
         #region Metodos
+
+        //permite obtener el inventario
         private void obtenerinventario() {
+            //obtengo el inventario mediante el método actualizar grid de frminventario,que permite cargar la lista almacenada en frmprincipal.
             frmInventario objinventario = new frmInventario();
             objinventario.actualizargrid();
 
+            //declaro la variable cantstock para no modificar la lista que sirve de Datasource en frmInventario.
             cantstock = new List<Inventario>(); 
             cantstock=frmPrincipal.listaInventario;
 
         }
+
+        //permite establecer conexión con la BD
         private bool establecerConexion()
         {
             try
@@ -67,13 +74,17 @@ namespace ProyectoFinal
             }
         }
 
+
+        //permite cargar el grid de búsqueda.
         void cargargridBusqueda()
         {
+            //Al ser un grid de productos, se ejecuta el método mostrarproducto de frmproducto que carga la listaproducto y esta última la utilizamos de datasource.
             frmProducto objfrmproducto = new frmProducto();
             objfrmproducto.mostrarProducto();
             dgvBusqueda.DataSource = frmPrincipal.listaProducto;
         }
 
+        //nos permite filtrar el grid de Productos por nombre o por id
         void filtrargrid()
         {
             frmPrincipal.listaProducto.Clear();
@@ -113,12 +124,15 @@ namespace ProyectoFinal
 
         }
 
+        //permite cargar el grid de DetalleVenta.
         void cargargridDetalle()
         {
             dgvVenta.DataSource = new List<DetalleVenta>();
             dgvVenta.DataSource = listadetalleVenta;
 
         }
+
+        //permite agregar un detalle localmente (no en bd) al grid DetallVenta.
         void agregarDetalle()
         {
             objdetalleventa = new DetalleVenta();
@@ -156,6 +170,8 @@ namespace ProyectoFinal
 
             }
         }
+
+        //permite eliminar un detalle localmente.
         void eliminarDetalle()
         { 
             DetalleVenta aux = (from n in this.listadetalleVenta
@@ -176,6 +192,7 @@ namespace ProyectoFinal
             
         }
 
+        //agrega la venta y sus detalles a la BD
         void agregarventa()
         {
             try
@@ -240,6 +257,7 @@ namespace ProyectoFinal
 
         }
 
+        //limpia el grid de detalle.
         void limpiargridDetalle()
         {
             obtenerinventario();
@@ -248,12 +266,24 @@ namespace ProyectoFinal
             lblTotal.Text = "0";
             txtCantidad.Clear();
         }
+
+        //permite limpiar los campos del formulario
+        void limpiarcampos()
+        {
+            txtBuscar.Text = "";
+            txtCantidad.Text = "";
+            txtIDProducto.Text = "";
+            txtBuscar.Focus();
+        }
         #endregion
 
+
+        //lista de eventos utilizados en el formulario.
         private void FrmVenta_Load(object sender, EventArgs e)
         {
             obtenerinventario();
             lblTotal.Text = "0";
+            txtBuscar.Focus();
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -273,6 +303,7 @@ namespace ProyectoFinal
         {
             agregarDetalle();
             cargargridDetalle();
+            limpiarcampos();
                      
         }
 
@@ -286,6 +317,7 @@ namespace ProyectoFinal
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             limpiargridDetalle();
+            limpiarcampos();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -294,6 +326,7 @@ namespace ProyectoFinal
             {
                 agregarventa();
                 limpiargridDetalle();
+                limpiarcampos();
 
             }
             else
@@ -301,6 +334,11 @@ namespace ProyectoFinal
 
 
             
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

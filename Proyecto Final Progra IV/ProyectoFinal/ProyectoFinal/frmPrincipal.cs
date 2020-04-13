@@ -13,15 +13,14 @@ namespace ProyectoFinal
 {
     public partial class frmPrincipal : Form
     {
-        
+        //Declara las variables static a utilizar en el programa.
         public static List<Proveedor> listaProveedor;
         public static List<Producto> listaProducto;
         public static List<Factura> listaFactura;
         public static List<Inventario> listaInventario;
-        
-
-
+        public static List<Gasto> listaGastos;
         public static int idbusqueda;
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -29,13 +28,14 @@ namespace ProyectoFinal
             listaProducto = new List<Producto>();
             listaFactura = new List<Factura>();
             listaInventario = new List<Inventario>();
+            listaGastos = new List<Gasto>();
             
 
 
 
 
         }
-
+        //Permite identificar si un formulario ya está abierto o no.
         Boolean PestannaAbierta(string frm)
         {
             foreach (Form item in Application.OpenForms)
@@ -49,6 +49,8 @@ namespace ProyectoFinal
             return false;
         }
 
+
+        //Permiten abrir los diferentes formularios hijos.
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             frmProveedores objfrmproveedores = new frmProveedores();
@@ -183,6 +185,28 @@ namespace ProyectoFinal
         
         
 
+        }
+
+        private void TsbGastos_Click(object sender, EventArgs e)
+        {
+            frmGastos objGasto = new frmGastos();
+            if (PestannaAbierta(objGasto.Name) != true)
+            {
+                objGasto.MdiParent = this;
+                objGasto.Dock = DockStyle.Fill;
+                objGasto.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Este Formulario ya se encuentra Abierto");
+            }
+
+        }
+
+        private void TsbReportes_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://localhost/Reports/report/ReporteFinal");
         }
     }
 }

@@ -29,7 +29,10 @@ namespace ProyectoFinal
 
         }
 
-        #region
+        #region Metodos
+
+
+        //Establece la conexión con la BD
         private bool establecerConexion()
         {
             try
@@ -54,6 +57,7 @@ namespace ProyectoFinal
             }
         }
 
+        //actualiza el datagridview
         void ActualizarGrid()
         {
             frmPrincipal.listaFactura.Clear();
@@ -89,6 +93,7 @@ namespace ProyectoFinal
             cnx.Dispose();
         }
 
+        //Método que permite marcar las celdas pagadas y no pagadas.
         void ColorearGrid()
         {
             foreach (DataGridViewRow row in dgvFacturas.Rows)
@@ -100,6 +105,8 @@ namespace ProyectoFinal
 
                 
         }
+
+        //Limpia los controles del formulario.
         void limpiarControles()
         {
             txtidProveedor.Text = "";
@@ -112,6 +119,7 @@ namespace ProyectoFinal
             //dtpFecha.Value = DateTime.Today;
         }
 
+        //obtiene los parametros necesarios del form para enviar a la bd.
         void obtenerparametros()
         {
             try
@@ -147,6 +155,7 @@ namespace ProyectoFinal
 
         }
 
+        //metodo utilizado para crear una factura
         void crearFactura()
         {
             try
@@ -184,6 +193,7 @@ namespace ProyectoFinal
 
         }
 
+        //metodo utilizado para modificar la factura
         void modificarFactura()
         {
 
@@ -213,6 +223,8 @@ namespace ProyectoFinal
 
 
         }
+
+        //metodo utilizado para eliminar una factura.
         void eliminarFactura()
         {
 
@@ -247,15 +259,18 @@ namespace ProyectoFinal
 
         }
 
-        #endregion
+        #endregion Metodos
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
+            txtnumFactura.Focus();
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet.tipoPago' Puede moverla o quitarla según sea necesario.
             this.tipoPagoTableAdapter.Fill(this.prograIVDataSet.tipoPago);
             // TODO: esta línea de código carga datos en la tabla 'prograIVDataSet.Factura' Puede moverla o quitarla según sea necesario.
             this.facturaTableAdapter.Fill(this.prograIVDataSet.Factura);
             limpiarControles();
+            dtpFecha.MaxDate = DateTime.Now;
+            dtpFecha.Value= DateTime.Now;
 
         }
 
@@ -296,6 +311,7 @@ namespace ProyectoFinal
             limpiarControles();
         }
 
+        //Este evento es el que permite dar colores a las celdas del datagridview
         private void DgvFacturas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             ColorearGrid();
@@ -307,6 +323,16 @@ namespace ProyectoFinal
             objfrmbusqueda.ShowDialog();
             txtidProveedor.Text = frmPrincipal.idbusqueda.ToString();
 
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtDescuento_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

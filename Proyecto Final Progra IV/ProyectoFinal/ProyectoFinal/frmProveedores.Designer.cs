@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prograIVDataSet1 = new ProyectoFinal.PrograIVDataSet1();
@@ -48,9 +51,7 @@
             this.proveedorTableAdapter = new ProyectoFinal.PrograIVDataSet1TableAdapters.ProveedorTableAdapter();
             this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prograIVDataSet1BindingSource)).BeginInit();
@@ -70,7 +71,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(162, 36);
-            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -91,8 +92,32 @@
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.RowHeadersVisible = false;
             this.dgvProveedores.Size = new System.Drawing.Size(631, 452);
-            this.dgvProveedores.TabIndex = 1;
+            this.dgvProveedores.TabIndex = 7;
             this.dgvProveedores.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProveedores_CellEnter);
+            // 
+            // idProveedor
+            // 
+            this.idProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idProveedor.DataPropertyName = "idProveedor";
+            this.idProveedor.HeaderText = "ID";
+            this.idProveedor.Name = "idProveedor";
+            this.idProveedor.ReadOnly = true;
+            // 
+            // desProveedor
+            // 
+            this.desProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.desProveedor.DataPropertyName = "desProveedor";
+            this.desProveedor.HeaderText = "Proveedor";
+            this.desProveedor.Name = "desProveedor";
+            this.desProveedor.ReadOnly = true;
+            // 
+            // TipoProveedor
+            // 
+            this.TipoProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoProveedor.DataPropertyName = "codTipoProveedor";
+            this.TipoProveedor.HeaderText = "Tipo";
+            this.TipoProveedor.Name = "TipoProveedor";
+            this.TipoProveedor.ReadOnly = true;
             // 
             // proveedorBindingSource
             // 
@@ -118,7 +143,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(162, 36);
-            this.btnModificar.TabIndex = 2;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
@@ -132,7 +157,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(162, 36);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -176,7 +201,7 @@
             this.txtIdProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.Size = new System.Drawing.Size(451, 24);
-            this.txtIdProveedor.TabIndex = 7;
+            this.txtIdProveedor.TabIndex = 1;
             // 
             // cmbTipoProveedor
             // 
@@ -188,7 +213,7 @@
             this.cmbTipoProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.cmbTipoProveedor.Name = "cmbTipoProveedor";
             this.cmbTipoProveedor.Size = new System.Drawing.Size(451, 25);
-            this.cmbTipoProveedor.TabIndex = 9;
+            this.cmbTipoProveedor.TabIndex = 3;
             this.cmbTipoProveedor.ValueMember = "idTipoProveedor";
             // 
             // tipoProveedorBindingSource
@@ -207,7 +232,7 @@
             this.txtnomProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtnomProveedor.Name = "txtnomProveedor";
             this.txtnomProveedor.Size = new System.Drawing.Size(451, 24);
-            this.txtnomProveedor.TabIndex = 8;
+            this.txtnomProveedor.TabIndex = 2;
             this.txtnomProveedor.TextChanged += new System.EventHandler(this.TxtnomProveedor_TextChanged);
             // 
             // tipoProveedorTableAdapter1
@@ -228,36 +253,27 @@
             this.proveedorBindingSource1.DataMember = "Proveedor";
             this.proveedorBindingSource1.DataSource = this.prograIVDataSet1BindingSource;
             // 
-            // idProveedor
+            // btnCerrar
             // 
-            this.idProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idProveedor.DataPropertyName = "idProveedor";
-            this.idProveedor.HeaderText = "ID";
-            this.idProveedor.Name = "idProveedor";
-            this.idProveedor.ReadOnly = true;
-            // 
-            // desProveedor
-            // 
-            this.desProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.desProveedor.DataPropertyName = "desProveedor";
-            this.desProveedor.HeaderText = "Proveedor";
-            this.desProveedor.Name = "desProveedor";
-            this.desProveedor.ReadOnly = true;
-            // 
-            // TipoProveedor
-            // 
-            this.TipoProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TipoProveedor.DataPropertyName = "codTipoProveedor";
-            this.TipoProveedor.HeaderText = "Tipo";
-            this.TipoProveedor.Name = "TipoProveedor";
-            this.TipoProveedor.ReadOnly = true;
+            this.btnCerrar.FlatAppearance.BorderSize = 3;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.btnCerrar.Location = new System.Drawing.Point(1317, 22);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(39, 34);
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1418, 600);
+            this.ClientSize = new System.Drawing.Size(1370, 600);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtnomProveedor);
             this.Controls.Add(this.cmbTipoProveedor);
             this.Controls.Add(this.txtIdProveedor);
@@ -270,6 +286,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -314,6 +331,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn desProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoProveedor;
+        private System.Windows.Forms.Button btnCerrar;
         //   private ProyectoFinal.PrograIVDataSetTableAdapters.TipoProveedorTableAdapter tipoProveedorTableAdapter;
     }
 }

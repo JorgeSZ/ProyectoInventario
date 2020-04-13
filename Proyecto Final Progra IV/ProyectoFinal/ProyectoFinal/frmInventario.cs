@@ -15,6 +15,7 @@ namespace ProyectoFinal
 {
     public partial class frmInventario : Form
     {
+        //Declara las variables globales utilizadas.
         SqlConnection cnx; //Declarando el objeto no lo inicializo
         SqlCommand cmd; //Declarado
         SqlDataReader dr;
@@ -26,8 +27,11 @@ namespace ProyectoFinal
             InitializeComponent();
             actualizargrid();
         }
+
+        //Grupo de métodos utilizados.
         #region Metodos
 
+        //Establece conexión con la BD
         private bool establecerConexion()
         {
             try
@@ -51,6 +55,8 @@ namespace ProyectoFinal
                 return false;
             }
         }
+
+        //Actualiza el grid del formulario
         public void actualizargrid()
         {
 
@@ -79,6 +85,7 @@ namespace ProyectoFinal
             cnx.Dispose();
         }
 
+        // Permite hacer una modificación manual del inventario.
         public void modificarinventario()
         {
             establecerConexion();
@@ -115,6 +122,7 @@ namespace ProyectoFinal
         }
     
 
+        //obtiene el total a agregar en el inventario.
         double totalproducto()
         {
             try
@@ -132,16 +140,19 @@ namespace ProyectoFinal
             
         }
 
+        //limpia los controles de la pantalla.
         void limpiarPantalla()
         {
             txtidProducto.Text = "";
             txtaddProducto.Text = "";
             txtminProducto.Text = "";
+            txtidProducto.Focus();
         }
         #endregion
         private void Inventario_Load(object sender, EventArgs e)
         {
-           
+            txtidProducto.Focus();
+               
         }
 
         private void Label2_Click(object sender, EventArgs e)
@@ -154,6 +165,11 @@ namespace ProyectoFinal
             modificarinventario();
             actualizargrid();
             limpiarPantalla();
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

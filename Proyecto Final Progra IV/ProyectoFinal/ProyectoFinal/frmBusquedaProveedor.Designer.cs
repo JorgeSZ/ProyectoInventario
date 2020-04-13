@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtnomProveedor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.colidProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coldesProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coltipoProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtnomProveedor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,29 @@
             this.dgvBusqueda.Size = new System.Drawing.Size(858, 364);
             this.dgvBusqueda.TabIndex = 0;
             this.dgvBusqueda.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBusqueda_CellEnter);
+            // 
+            // colidProveedor
+            // 
+            this.colidProveedor.DataPropertyName = "idProveedor";
+            this.colidProveedor.HeaderText = "ID";
+            this.colidProveedor.Name = "colidProveedor";
+            this.colidProveedor.ReadOnly = true;
+            // 
+            // coldesProveedor
+            // 
+            this.coldesProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.coldesProveedor.DataPropertyName = "desProveedor";
+            this.coldesProveedor.HeaderText = "Proveedor";
+            this.coldesProveedor.Name = "coldesProveedor";
+            this.coldesProveedor.ReadOnly = true;
+            // 
+            // coltipoProveedor
+            // 
+            this.coltipoProveedor.DataPropertyName = "codTipoProveedor";
+            this.coltipoProveedor.HeaderText = "Tipo Proveedor";
+            this.coltipoProveedor.Name = "coltipoProveedor";
+            this.coltipoProveedor.ReadOnly = true;
+            this.coltipoProveedor.Visible = false;
             // 
             // btnAceptar
             // 
@@ -90,29 +113,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre Proveedor";
             // 
-            // colidProveedor
-            // 
-            this.colidProveedor.DataPropertyName = "idProveedor";
-            this.colidProveedor.HeaderText = "ID";
-            this.colidProveedor.Name = "colidProveedor";
-            this.colidProveedor.ReadOnly = true;
-            // 
-            // coldesProveedor
-            // 
-            this.coldesProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.coldesProveedor.DataPropertyName = "desProveedor";
-            this.coldesProveedor.HeaderText = "Proveedor";
-            this.coldesProveedor.Name = "coldesProveedor";
-            this.coldesProveedor.ReadOnly = true;
-            // 
-            // coltipoProveedor
-            // 
-            this.coltipoProveedor.DataPropertyName = "codTipoProveedor";
-            this.coltipoProveedor.HeaderText = "Tipo Proveedor";
-            this.coltipoProveedor.Name = "coltipoProveedor";
-            this.coltipoProveedor.ReadOnly = true;
-            this.coltipoProveedor.Visible = false;
-            // 
             // frmBusquedaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -124,15 +124,17 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvBusqueda);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBusquedaProveedor";
             this.Text = "frmBusquedaProveedor";
+            this.Load += new System.EventHandler(this.FrmBusquedaProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
